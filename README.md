@@ -1,108 +1,349 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Contents
+* [UX](#UX)
+    * [Strategy](#Strategy)
+       * [Project Goals](#Project-Goals)
+       * [User Stories](#User-Stories) 
+    * [Structure](#Structure)
+       * [Existing Features](#Existing-Features) 
+            * [Features on all pages](#Features-on-all-pages)
+            * [Home Page Features](#Home-Page-Features)
+            * [Articles Page Features](#Articles-Page-Features)
+            * [Login Page Features](#Login-Page-Features)
+            * [Sign-Up Page Features](#Sign-Up-Page-Features)
+            * [Profile Page Features](#Profile-Page-Features)
+            * [Topics Page Features](#Topics-Page-Features)
+            * [Further Reading Page Features](#Further-Reading-Page-Features)  
+            * [Log Out Features](#Log-Out-Features)
+            * [404 Page](#404-Page)
+            * [500 Page](#500-Page)
+            * [Features exclusive to Admin][#Features-exclusive-to-Admin]          
+       * [Features Left To Implement](Feature-Left-To-Implement)  
+       * [Design](#Design)
+            * [Colors](#Colors)
+            * [Typography](#Imagery)
+            * [Imagery](#Imagery)    
+    * [Skeleton](#Skeleton)
+      * [Wireframes](#Wireframes)
+      * [Database Schema](#Database-Schema)
+      * [Sitemap](#Sitemap)
+    * [Technolgies Used](#Technologies-Used)
+    * [Testing](#Testing)
+    * [Deployment](#Deployment)
+      * [Deployment Steps](#Deployment-Steps) 
+      * [Making a clone to run locally](#Making-a-clone-to-run-locally)
+      * [How to Fork the respository](#How-to-Fork-the-Respository)
+    * [Credits](#Credits)
+      * [Media](#Media)
+      * [Content](#Content)
+      * [Code](#Code)
+      * [Acknowledgements](#Acknowledgements)
 
-Welcome USER_NAME,
+# Site Name
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+# Collaborators
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+* [Scott](https://github.com/Ryagg)
 
-## Gitpod Reminders
+* [Jon](https://github.com/jpg6453)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+* [Aideen](https://github.com/AideenM12)
 
-`python3 -m http.server`
+* [Mateusz](https://github.com/mateuszniechwiej)
 
-A blue button should appear to click: _Make Public_,
+* [Steve](https://github.com/SteveKennyUK)
 
-Another blue button should appear to click: _Open Browser_.
+![Website MockUp](assets/documentation/doc-images/MS3-Mockup.png)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+The live website can be viewed [here](https://motherfolklore.herokuapp.com/)
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+# UX
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## Strategy
 
-To log into the Heroku toolbelt CLI:
+### Project Goals
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
 
-------
 
-## Release History
+**The Ideal User of this site:**
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+  
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+### User Stories
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+* As a first-time user I want to know the main purpose of the site immediately upon arriving on the site.
+* As a first-time user I want the site UX to be intuitive for ease of use. 
+* As a returning user, I want to be able to register with the site and create my own profile which I can log in to at any time.
+* As a returning user, I want to be able to add ....
+* As a returning user, I want to be able to edit/delete any contribution I have made to the site. 
+* As a user I want the site to be responsive to all devices.
+* As a user I want to be able to contact the admin with any queries or suggestions I may have.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+# Structure
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+## Existing Features
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### Features on all pages:
+* Navbar
+* Footer
+* Social Media Icons
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+### Home page features:
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### Login page features:
 
-------
+ 
+* A Log in form is presented to the user which asks for their username and password which are validated by the login route handler. An image of the login form can be seen below.
 
-## FAQ about the uptime script
 
-**Why have you added this script?**
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+### Sign-Up page features:
 
-**How will this affect me?**
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+* A register form is presented to the user which asks for their username, email address and password which are validated by the sign route handler. The password must be declared twice to ensure it matches or else the user will be notified that their passwords do not match. This is done to ensure that the user has input a password that they are familiar with and can remember and to avoid any possible typos that could hinder the user from signing in in the future. An image of the registration form can be seen below.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
 
-**So….?**
+### Profile page features:
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
 
-**Can I opt out?**
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
 
-**Anything more?**
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+### Logout features:
+* The log out button removes the user's session cookie from the app using the pop method and redirects the user to the login page.
 
----
+### 404 Page
+* A 404 Page has been created in order to deal with user errors in navigation or invalid search data in order to assist the user in returning to the home page. All navigation features are present on the 404 page as well as a button labeled 'home' in order to easily redirect the user back to the relevant page.
 
-Happy coding!
+
+
+### 500 Page 
+* A 500 page has been created to deal with any potential internal server errors.
+
+
+
+### Features exclusive to Admin:
+
+* Only the Admin can edit/delete all articles content on the site, otherwise the content must belong to the session user in order for it to be edited or deleted. 
+
+
+
+## Features left to implement
+
+
+
+
+
+
+## Design
+
+### Colors
+
+* The colors of this site were chosen 
+
+This palette was created on the [Coolors Website](https://coolors.co).
+
+
+
+
+### Typography
+
+
+
+* Both fonts were found on [Google Fonts](https://fonts.google.com/)
+
+
+
+### Imagery
+
+
+
+
+
+## Skeleton
+
+### Wireframes
+
+* The wireframes were created using [Balsamiq wireframes](https://balsamiq.com/)
+
+* The wireframe mockup links can be found below:
+
+* [Home Page Wireframes]()
+
+* [Contact Page Wireframes]()
+
+* [Register Page Wireframes]()
+
+* [Profile Page Wireframes]()
+
+* [Login Page Wireframes]()
+
+
+
+### Database Schema
+
+
+
+* The site contains  collections which are stored in MongoDB. The users collection stores the user's username and password which enables the user to create an account and have a profile page. 
+
+
+### Sitemap
+* The sitemap was created using [Balsamiq wireframes](https://balsamiq.com/)
+
+* A link to the [Sitemap can be found here](assets/documentation/wireframes/MS3-sitemap-wireframe.pdf)
+
+## Technologies Used
+- This project is primarily built using HTML5 semantic markup, CSS stylesheets, Javascript, Python, Flask and MongoDB.
+- [Flask](https://flask.palletsprojects.com/en/2.0.x/)
+    - Flask was used as the main python framework in the building of this project.
+- [jQuery](https://jquery.com/)
+    - This framework was used to create some of the site's interactive functions.
+- [Gitpod](https://gitpod.io)
+    - This project was built using Gitpod as the IDE.
+- [Github](https://github.com/)
+    - Github was used for online version control and storing files and documents.
+- [Heroku](https://id.heroku.com/)
+    - Heroku was used as a cloud based platform to deploy this site.
+- [Google fonts](https://fonts.google.com/) 
+    - The font styles used on this website were chosen from Google fonts.
+- [Materializecss](https://materializecss.com/)
+   - Various aspects of this website were structured using Materialize.
+   - Materialize was used to make this website responsive
+- [Fontawesome](https://fontawesome.com/)
+    - The icons used on this page were found in Fontawesome.
+- [MongoDB](https://www.mongodb.com/)
+    - MongoDB Atlas was used as the database for the creation of this project.
+- [Jinja](https://jinja.palletsprojects.com/en/3.0.x/)
+    - Jinja was used for templating.
+- [flask-paginate](https://pythonhosted.org/Flask-paginate/)
+    - flask-paginate was used to create the site's pagination links.
+- [Balsamiq](https://balsamiq.com/)
+    - The wireframes and sitemap for this project were created using Balsamiq.
+ - [Freeformatter- CSS beautifier](https://www.freeformatter.com/css-beautifier.html)
+    - This was used to format the CSS stylesheet.
+- [Freeformatter- HTML formatter](https://www.freeformatter.com/html-formatter.html)
+    - This was used to format each HTML page
+- [PEP8online](http://pep8online.com/)
+    - PEP8 online was used to make sure all python code was pep8 compliant.
+- [Google DevTools](https://developers.google.com/web/tools/chrome-devtools) 
+    - Google Dev Tools was extensively used throughout the project for various styling and testing purposes. Its lighthouse feature was used as one of the main testing tools for this project.
+- [EmailJS](https://www.emailjs.com/)
+    - The contact-form was created using EmailJS following a code institute tutorial.
+- [CSS-Tricks](https://css-tricks.com/)
+    - This was used as a general reference resource.
+- [Favicon.io](https://favicon.io/) 
+    - This was used to create the site's favicon.
+- [Am I Responsive](http://ami.responsivedesign.is/)
+    - This was used to test the responsiveness of the site and also to create the mock-up image presented at the start of this document.
+- [Beautifier.io](https://beautifier.io/)
+    - Beautifier.io was used to format all javascript files in this project.
+- [Dbdiagram.io](https://dbdiagram.io/home)
+    - Dbdiagram.io was used to create the Database Schema presented in this document.
+- [Coolors.co](https://coolors.co/)
+    - Coolors.co was used to create the project's color palette.
+- [StackOverflow](https://stackoverflow.com/)
+    - Stack Overflow was used as a general reference resource. 
+
+## Testing
+Testing information can be found here in the separate [TESTING.md file](TESTING.md)
+
+## Deployment
+This project was developed using [Gitpod IDE](https://gitpod.io) and pushed to Github using the in-built terminal. However, because Github can only host static websites it was necessary to deploy this project to Heroku because it is a compatible hosting platform for a back-end focused site like MotherFolklore. 
+
+This project was deployed using Heroku and stored in GitHub.
+
+Before deploying the website to Heroku, the following three must be followed to allow the app to work in Heroku:
+1. Create requirements.txt file that contains the names of packages being used in Python. It is important to update this file if other packages or modules are installed during project development by using the following command:
+
+    - pip freeze --local > requirements.txt
+
+2. Create Procfile that contains the name of the application file so that Heroku knows what to run. If the Procfile has a blank line when it is created remove this as this may cause problems.
+
+3. Push these files to GitHub.
+Once those steps are done, the website can be deployed in Heroku using the steps listed below:
+
+### Deployment Steps
+
+1. Log into Heroku.
+2. Click the New button.
+3. Click the option to create a new app.
+4. Enter the app name in lowercase letters.
+5. Select the correct geographical region.
+
+### Set environment variables:
+
+Navigate to the settings tab and then click the Reveal Config Vars button and add the following:
+
+1. key: IP, value: 0.0.0.0
+2. key: PORT, value: 5000
+3. key: MONGO_DBNAME, value: (the name of the database that is being used for the project)
+4. key: MONGO_URI, value:
+ * This can be found in MongoDB by navigating  to the clusters section of your MongoDB account.
+ * Click the cluster where the database is located.
+ * Click the connect button.
+ * Select the connect you application button.
+ *  Copy the link provided to your application and ensure you have substituted the password and dbname with the correct values).
+5. key: SECRET_KEY, value: (This is a custom secret key set up for configuration to keep client-side sessions secure).
+
+
+### Enable automatic deployment:
+
+1. Click the Deploy tab
+2. In the Automatic deploys section, choose the branch you want to deploy from then click Enable Automation Deploys.
+
+
+### Connect app to Github Repository
+
+1. Click the deploy tab and connect to GitHub.
+2. Type the name of the repository into the search bar presented.
+3. Click the Code dropdown button next to the green Gitpod button.
+4. When the correct repository displays click the connect button.
+
+
+
+### Making a clone to run locally
+
+It is important to note that this project will not run locally unless an env.py file has been set up by the user which contains the IP, PORT, MONGO_DBNAME, MONGO_URI and SECRET_KEY which have all been kept secret in keeping with best security practices. 
+
+1. Log into GitHub.
+2. Select the [respository](https://github.com/AideenM12/Trust-in-soda-hackathon).
+3. Click the Code dropdown button next to the green Gitpod button.
+4. Download ZIP file and unpackage locally and open with IDE. Alternatively copy the URL in the HTTPS box.
+5. Open the alternative editor and terminal window.
+6. Type 'git clone' and paste the copied URL.
+7. Press Enter. A local clone will be created.
+
+Once the project been loaded into the IDE it is necessary to install the necessary requirements which can be done by typing the following command.
+
+    -pip install -r requirements.txt
+
+### How to Fork the respository.
+
+1. Log into GitHub.
+2. In Github go to (https://github.com/AideenM12/Trust-in-soda-hackathon).
+3. In the top right hand corner click "Fork".
+
+## Credits
+
+### Media
+
+
+
+### Content
+
+
+### Code
+
+
+### Acknowledgements
+
