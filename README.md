@@ -110,7 +110,7 @@ The live website can be viewed [here](https://motherfolklore.herokuapp.com/)
 | 6   | Profile Page                         | 4          | 5                     |
 | 7   | Edit profile functionality                     | 4          | 5                     |
 | 8   | Allow user to fill a form with information about them disabilities and send it to ther admint  | 5          | 4                     |
-8   | Receive form submission confirmation  | 4          | 4Receive form submission confirmation                     |
+9   | Receive form submission confirmation  | 4          | 4                     |
 
 # Structure
 
