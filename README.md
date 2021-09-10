@@ -1,42 +1,46 @@
-# Contents
-* [UX](#UX)
-    * [Strategy](#Strategy)
-       * [Project Goals](#Project-Goals)
-       * [User Stories](#User-Stories) 
-    * [Structure](#Structure)
-       * [Existing Features](#Existing-Features) 
-            * [Features on all pages](#Features-on-all-pages)
-            * [Home Page Features](#Home-Page-Features)
-            * [Articles Page Features](#Articles-Page-Features)
-            * [Login Page Features](#Login-Page-Features)
-            * [Sign-Up Page Features](#Sign-Up-Page-Features)
-            * [Profile Page Features](#Profile-Page-Features)
-            * [Topics Page Features](#Topics-Page-Features)
-            * [Further Reading Page Features](#Further-Reading-Page-Features)  
-            * [Log Out Features](#Log-Out-Features)
-            * [404 Page](#404-Page)
-            * [500 Page](#500-Page)
-            * [Features exclusive to Admin][#Features-exclusive-to-Admin]          
-       * [Features Left To Implement](Feature-Left-To-Implement)  
-       * [Design](#Design)
-            * [Colors](#Colors)
-            * [Typography](#Imagery)
-            * [Imagery](#Imagery)    
-    * [Skeleton](#Skeleton)
-      * [Wireframes](#Wireframes)
-      * [Database Schema](#Database-Schema)
-      * [Sitemap](#Sitemap)
-    * [Technolgies Used](#Technologies-Used)
-    * [Testing](#Testing)
-    * [Deployment](#Deployment)
-      * [Deployment Steps](#Deployment-Steps) 
-      * [Making a clone to run locally](#Making-a-clone-to-run-locally)
-      * [How to Fork the respository](#How-to-Fork-the-Respository)
-    * [Credits](#Credits)
-      * [Media](#Media)
-      * [Content](#Content)
-      * [Code](#Code)
-      * [Acknowledgements](#Acknowledgements)
+h# Contents
+- [Site Name](#site-name)
+- [Collaborators](#collaborators)
+- [UX](#ux)
+  - [Strategy](#strategy)
+    - [Project Goals](#project-goals)
+    - [User Stories](#user-stories)
+- [Scope](#scope)
+    - [_Planed Features_](#planed-features)
+- [Structure](#structure)
+  - [Existing Features](#existing-features)
+    - [Features on all pages:](#features-on-all-pages)
+    - [Home page features:](#home-page-features)
+    - [Login page features:](#login-page-features)
+    - [Sign-Up page features:](#sign-up-page-features)
+    - [Profile page features:](#profile-page-features)
+    - [Logout features:](#logout-features)
+    - [404 Page](#404-page)
+    - [500 Page](#500-page)
+    - [Features exclusive to Admin:](#features-exclusive-to-admin)
+  - [Features left to implement](#features-left-to-implement)
+  - [Design](#design)
+    - [Colors](#colors)
+    - [Typography](#typography)
+    - [Imagery](#imagery)
+  - [Skeleton](#skeleton)
+    - [Wireframes](#wireframes)
+    - [Database Schema](#database-schema)
+    - [Sitemap](#sitemap)
+  - [Technologies Used](#technologies-used)
+  - [Testing](#testing)
+  - [Deployment](#deployment)
+    - [Deployment Steps](#deployment-steps)
+    - [Set environment variables:](#set-environment-variables)
+    - [Enable automatic deployment:](#enable-automatic-deployment)
+    - [Connect app to Github Repository](#connect-app-to-github-repository)
+    - [Making a clone to run locally](#making-a-clone-to-run-locally)
+    - [How to Fork the respository.](#how-to-fork-the-respository)
+  - [Credits](#credits)
+    - [Media](#media)
+    - [Content](#content)
+    - [Code](#code)
+    - [Acknowledgements](#acknowledgements)
 
 # Site Name
 
@@ -81,6 +85,32 @@ The live website can be viewed [here](https://motherfolklore.herokuapp.com/)
 * As a user I want to be able to contact the admin with any queries or suggestions I may have.
 
 
+# Scope 
+
+### _Planed Features_
+
+1. Responsive website with a navigation menu and website title.
+2. Login functionality
+3. Registration functionality
+4. Logout functionality
+5. MongoDB database to store username and user needs.
+6. Profile Page
+7. Edit profile functionality
+8. Allow user to submit a form with information about them disabilities
+9. Receive form submission confirmation
+
+
+| -   | Planed Feature                                                     | Importance | Viability/Feasibility |
+| --- | ------------------------------------------------------------------ | ---------- | --------------------- |
+| 1   | Responsive website with a navigation menu and website title                                             | 5          | 4                     |
+| 2   | Login functionality                                   | 4          | 4                     |
+| 3   | Registration functionality      | 4          | 4                     |
+| 4   | Logout functionality            | 4          | 5                     |
+| 5   | MongoDB database to store username and user needs.                                           | 4          | 4                     |
+| 6   | Profile Page                         | 4          | 5                     |
+| 7   | Edit profile functionality                     | 4          | 5                     |
+| 8   | Allow user to fill a form with information about them disabilities and send it to ther admint  | 5          | 4                     |
+9   | Receive form submission confirmation  | 4          | 4                     |
 
 # Structure
 
