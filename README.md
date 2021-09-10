@@ -97,7 +97,7 @@ The live website can be viewed [here](https://motherfolklore.herokuapp.com/)
 6. Profile Page
 7. Edit profile functionality
 8. Allow user to submit a form with information about them disabilities
-9. Receive form submission confirmation
+9. Receive form submission confirmation 
 
 
 | -   | Planed Feature                                                     | Importance | Viability/Feasibility |
