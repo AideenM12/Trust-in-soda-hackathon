@@ -180,7 +180,7 @@ This palette was created on the [Coolors Website](https://coolors.co).
 
 * [Home Page Wireframes]()
 
-* [Contact Page Wireframes]()
+* [Contact Page Wireframes](assets/wireframes/TIS-contact-wireframe.pdf)
 
 * [Register Page Wireframes]()
 
