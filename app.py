@@ -40,19 +40,24 @@ def profile():
     return render_template("profile.html")
 
 
+@app.route("/requirements")
+def requirements():
+    return render_template("requirements-survey.html")
+
+
+@app.route("/subcategories")
+def subcategories():
+    return render_template("disabilities-subcategories.html")
+
+
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
 
 
-@app.route("/disability-subcategories")
-def disability_subcategories():
-    return render_template("disability-subcategories.html")
 
 
-@app.route("/requirements-survey")
-def requirements_survey():
-    return render_template("requirements-survey.html")
+
 
 
 # Change to False before submission
