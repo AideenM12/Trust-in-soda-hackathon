@@ -12,13 +12,15 @@ from wtforms import (
 from wtforms.validators import InputRequired, EqualTo
 
 
-
 if os.path.exists("env.py"):
     import env
 
 
 app = Flask(__name__)
 csrf = CSRFProtect(app)
+
+
+csrf.init_app(app)
 
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
@@ -36,18 +38,6 @@ def index():
     Renders home page when main website loaded.
     """
     return render_template("index.html")
-
-
-@app.route("/profile", methods=["GET", "POST"])
-def profile():
-    """
-    Links users to their profiles by checking the session username
-    against the users collection in the database. Profile page
-    displays all the user's contributions upon successful
-    log in.
-    """
-       
-    return render_template("profile.html")
 
 
 """
@@ -77,30 +67,36 @@ def login():
     it corresponds with the users collection in the database.
     """
     form = LoginForm(request.form)
-  #  if request.method == 'POST' and form.validate():
-   #     existing_user = mongo.db.users.find_one(
-    #        {"username": request.form.get("username").lower()})
+    if request.method == 'POST' and form.validate():
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
 
-     #   if existing_user:
-      #      if check_password_hash(
-       #             existing_user["password"], request.form.get("password")):
-        #        session["user"] = request.form.get("username").lower()
-
-         #       flash("Welcome back {}!".format(
-          #          request.form.get("username")))
-           #     return redirect(url_for(
-            #        "profile", username=session["user"]))
-           # else:
-            #    flash("Incorrect Username/password, Please try again")
-             #   return redirect(url_for("login"))
-
-       # else:
-        #    flash("Incorrect Username/password, Please try again")
-        #    return redirect(url_for("login"))
+        if existing_user:
+            flash("Welcome back {}!".format(
+                request.form.get("username")))
+            return redirect(url_for(
+                "profile", username=session["user"]))
+        else:
+            flash("Incorrect Username/password, Please try again")
+            return redirect(url_for("login"))
 
     return render_template("login.html", title='Login', form=form)
 
 
+@app.route("/profile/<username>", methods=["GET", "POST"])
+def profile(username):
+    """
+    Links users to their profiles by checking the session username
+    against the users collection in the database. Profile page
+    displays all the user's contributions upon successful
+    log in.
+    """
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+    if session["user"]:
+        return render_template("profile.html", username=username)
+
+    return redirect(url_for("login"))
 
 
 @app.route("/requirements")
@@ -118,18 +114,14 @@ def contact():
     return render_template("contact.html")
 
 
-
 @app.errorhandler(500)
 def server_error(error):
     return render_template("500.html", error=error), 500
 
 
-
-
 @app.errorhandler(404)
 def error404(e):
     return render_template('404.html'), 404
-
 
 
 # Change to False before submission
