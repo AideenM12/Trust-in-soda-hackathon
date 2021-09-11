@@ -1,0 +1,61 @@
+[
+    {"type": "visual",
+    "blindness":
+{
+"screen reader": ["JAWS", "NVDA", "VoiceOver"]
+},
+"low vision": ["screen magnification software", "zoom-in browsers", "text readers"]
+,
+"color blindness":
+{
+    "tool1": "item1"
+}
+},
+{"type": "auditory",
+    "deaf":
+    {
+        "closed captioning": ["automatic", "automatic + edited", "add your own captions"]
+    },
+    "hard of hearing":
+    {
+        "closed captioning": ["automatic", "automatic + edited", "add your own captions"]
+    }
+},
+{
+    "type": "physical",
+    "inability to use a mouse": ["voice recognition", "keyboard accessibility", "gestures", "head pointers", "motion tracking", "eye tracking", "single switch entry device"],
+    "slow response time":
+    {
+        "tool1": "item1"
+    },
+    "limited motor control":
+    {
+        "tool1": "item1"
+    },
+    "limited mobility": ["wheelchair", "exoskeleton", "standing frame", "standing wheelchair", "active stander", "canes", "crutches", "walkers", "gait trainers"]
+},
+{
+    "type": "cognitive",
+    "learning disabilities":
+    {
+        "tool1": "item1"
+    },
+    "distractability":
+    {
+        "tool1": "item1"
+    },
+    "inability to focus on large amounts of information":
+    {
+        "tool1": "item1"
+    }
+},
+{
+    "type": "speech",
+    "stuttering": [""],
+    "apraxia": [""],
+    "dysarthria": [""],
+    "articulation disorders": [""],
+    "phonemic disorders": [""],
+    "muteness": [""]
+}
+]
