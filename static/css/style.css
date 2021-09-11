@@ -1,0 +1,13 @@
+input:focus {
+    outline: 2px solid royalblue;
+    box-shadow: 1px 1px 8px 1px royalblue;
+  }
+
+  .hidden {
+    display: none
+  }
+  
+  .hint {
+    color: red;
+  }
+  
