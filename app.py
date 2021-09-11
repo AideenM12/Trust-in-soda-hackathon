@@ -4,13 +4,21 @@ from flask import (
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from werkzeug.security import generate_password_hash, check_password_hash
+from flask_wtf.csrf import CSRFProtect, validate_csrf, ValidationError
+from wtforms import (
+    Form, TextField,
+    PasswordField, validators)
+from wtforms.validators import InputRequired, EqualTo
 
 
 
 if os.path.exists("env.py"):
     import env
 
+
 app = Flask(__name__)
+csrf = CSRFProtect(app)
 
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
@@ -42,6 +50,59 @@ def profile():
     return render_template("profile.html")
 
 
+"""
+The below code was taken from
+https://wtforms.readthedocs.io/en/stable/crash_course/
+"""
+
+
+class LoginForm(Form):
+    """
+    Form fields for user login
+    """
+    username = TextField('Username')
+    password = PasswordField('Password')
+
+
+"""
+End Credit
+"""
+
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    """
+    Allows users to login and access their profile
+    by checking their password and username to make sure
+    it corresponds with the users collection in the database.
+    """
+    form = LoginForm(request.form)
+  #  if request.method == 'POST' and form.validate():
+   #     existing_user = mongo.db.users.find_one(
+    #        {"username": request.form.get("username").lower()})
+
+     #   if existing_user:
+      #      if check_password_hash(
+       #             existing_user["password"], request.form.get("password")):
+        #        session["user"] = request.form.get("username").lower()
+
+         #       flash("Welcome back {}!".format(
+          #          request.form.get("username")))
+           #     return redirect(url_for(
+            #        "profile", username=session["user"]))
+           # else:
+            #    flash("Incorrect Username/password, Please try again")
+             #   return redirect(url_for("login"))
+
+       # else:
+        #    flash("Incorrect Username/password, Please try again")
+        #    return redirect(url_for("login"))
+
+    return render_template("login.html", title='Login', form=form)
+
+
+
+
 @app.route("/requirements")
 def requirements():
     return render_template("requirements-survey.html")
@@ -61,7 +122,8 @@ def contact():
 @app.errorhandler(500)
 def server_error(error):
     return render_template("500.html", error=error), 500
-    
+
+
 
 
 @app.errorhandler(404)
