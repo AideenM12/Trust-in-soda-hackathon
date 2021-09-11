@@ -28,6 +28,21 @@ def hello():
     return "Hello World!"
 
 
+@app.route("/requirements")
+def requirements():
+    return render_template("requirements-survey.html")
+
+
+@app.route("/subcategories")
+def subcategories():
+    return render_template("disabilities-subcategories.html")
+
+
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
+
+
 # Change to False before submission
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
