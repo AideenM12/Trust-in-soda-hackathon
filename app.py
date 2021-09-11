@@ -21,11 +21,13 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-
-
 @app.route("/")
-def hello():
-    return "Hello World!"
+@app.route("/home")
+def home():
+    """
+    Renders home page when main website loaded.
+    """
+    return render_template("home.html")
 
 
 @app.route("/profile", methods=["GET", "POST"])
