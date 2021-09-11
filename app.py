@@ -40,6 +40,13 @@ def index():
     return render_template("index.html")
 
 
+@app.route("/test")
+def test():
+    test_collection = list(mongo.db.test_collection.find())
+    return render_template("test.html", test_collection=test_collection)
+
+
+
 """
 The below code was taken from
 https://wtforms.readthedocs.io/en/stable/crash_course/
@@ -72,10 +79,18 @@ def login():
             {"username": request.form.get("username").lower()})
 
         if existing_user:
-            flash("Welcome back {}!".format(
-                request.form.get("username")))
-            return redirect(url_for(
-                "profile", username=session["user"]))
+            if check_password_hash(
+                    existing_user["password"], request.form.get("password")):
+                session["user"] = request.form.get("username").lower()
+
+                flash("Welcome back {}!".format(
+                    request.form.get("username")))
+                return redirect(url_for(
+                    "profile", username=session["user"]))
+            else:
+                flash("Incorrect Username/password, Please try again")
+                return redirect(url_for("login"))
+
         else:
             flash("Incorrect Username/password, Please try again")
             return redirect(url_for("login"))
