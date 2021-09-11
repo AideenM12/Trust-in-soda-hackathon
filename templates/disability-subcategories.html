@@ -1,0 +1,198 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <h1>Welcome to AFA</h1>
+    <p>Please check all categories apply to you.</p>
+
+    <form>
+        <fieldset>
+            <legend>Visual impairments</legend>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="blind" id="blind">
+                <label class="form-check-label" for="blind">
+                    Legal blindness
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="low-vision" id="low-vision">
+                <label class="form-check-label" for="low-vision">
+                    Low vision
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="color" id="color">
+                <label class="form-check-label" for="color">
+                    Color blindness
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="other" id="other">
+                <label class="form-check-label" for="other">
+                    Other impairments
+                </label>
+                <div class="input-group mb-3">
+                <label for "other-impairments">Please specify:</label>
+                <input type="text" class="form-control" name="other-impairments" id="other-impairments" aria-label="other-impairments">
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Auditory impairments</legend>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="deaf" id="deaf">
+                <label class="form-check-label" for="deaf">
+                    Deaf
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="hoh" id="hoh">
+                <label class="form-check-label" for="hoh">
+                    Hard of hearing
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="other" id="other">
+                <label class="form-check-label" for="other">
+                    Other impairments
+                </label>
+                <div class="input-group mb-3">
+                <label for "other-impairments">Please specify:</label>
+                <input type="text" class="form-control" name="other-impairments" id="other-impairments" aria-label="other-impairments">
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Physical (motor) impairments</legend>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="mouse" id="mouse">
+                <label class="form-check-label" for="mouse">
+                    Inability to use a mouse
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="mobility" id="mobility">
+                <label class="form-check-label" for="mobility">
+                    Limited mobility
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="motor-control" id="motor-control">
+                <label class="form-check-label" for="motor-control">
+                    Limited motor control
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="slow-response" id="slow-response">
+                <label class="form-check-label" for="slow-response">
+                    Slow response time
+                </label>
+                <div class="input-group mb-3">
+                <label for "other-impairments">Please specify:</label>
+                <input type="text" class="form-control" name="other-impairments" id="other-impairments" aria-label="other-impairments">
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Cognitive impairments</legend>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="learning" id="learning">
+                <label class="form-check-label" for="learning">
+                    Learning disabilities
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="distractability" id="distractability">
+                <label class="form-check-label" for="distractability">
+                    Distractability
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="focus" id="focus">
+                <label class="form-check-label" for="focus">
+                    Inability to focus on large amounts of information
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="other" id="other">
+                <label class="form-check-label" for="other">
+                    Other impairments
+                </label>
+                <div class="input-group mb-3">
+                <label for "other-impairments">Please specify:</label>
+                <input type="text" class="form-control" name="other-impairments" id="other-impairments" aria-label="other-impairments">
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Speech impairments</legend>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="stutter" id="stutter">
+                <label class="form-check-label" for="stutter">
+                    Stuttering
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="apraxia" id="apraxia">
+                <label class="form-check-label" for="apraxia">
+                    Apraxia
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="dysarthria" id="dysarthria">
+                <label class="form-check-label" for="dysarthria">
+                    Dysarthria
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="articulation" id="articulation">
+                <label class="form-check-label" for="articulation">
+                    Articulation disorders
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="phonemic" id="phonemic">
+                <label class="form-check-label" for="phonemic">
+                    Phonemic disorders
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="mute" id="mute">
+                <label class="form-check-label" for="mute">
+                    Muteness
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="other" id="other">
+                <label class="form-check-label" for="other">
+                    Other impairments
+                </label>
+                <div class="input-group mb-3">
+                <label for "other-impairments">Please specify:</label>
+                <input type="text" class="form-control" name="other-impairments" id="other-impairments" aria-label="other-impairments">
+                </div>
+            </div>
+        </fieldset>
+    </form>
+
+{% endblock %}
