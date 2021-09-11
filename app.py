@@ -28,6 +28,18 @@ def hello():
     return "Hello World!"
 
 
+@app.route("/profile", methods=["GET", "POST"])
+def profile():
+    """
+    Links users to their profiles by checking the session username
+    against the users collection in the database. Profile page
+    displays all the user's contributions upon successful
+    log in.
+    """
+       
+    return render_template("profile.html")
+
+
 @app.route("/requirements")
 def requirements():
     return render_template("requirements-survey.html")
@@ -41,6 +53,11 @@ def subcategories():
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
+
+
+
+
+
 
 
 # Change to False before submission
