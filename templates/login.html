@@ -15,7 +15,7 @@
                     <div class="col-11 col-md-6 col-lg-5 col-xl-4 card p-4">
                         <h3>Log in to view or edit your profile</h3>
                         {% from "_formhelpers.html" import render_field %}
-                        <form id="login-form">
+                        <form id="login-form" method="POST" action="{{ url_for('login') }}">
                            <!-- <div class="form-group">
                                 <label for="loginInput">Username</label>
                                 <input type="text" class="form-control" id="loginInput" required>
@@ -34,6 +34,9 @@
                              </div>
                         </form>
                         <p class="mt-2">No profile?  <a class="fh-link" href="#">Create a profile</a></p>
+                        {% if error %}
+                        <p class="error"><strong>Error:</strong>{{error}}</p>
+                        {% endif %}
                     </div>
                 </div>
             </div>
