@@ -210,11 +210,11 @@ This palette was created on the [Coolors Website](https://coolors.co).
 
 * [Home Page Wireframes]()
 
-* [Contact Page Wireframes](assets/wireframes/TIS-contact-wireframe.pdf)
+* [Contact Page Wireframes](static/wireframes/TIS-contact-wireframe.pdf)
 
 * [Register Page Wireframes]()
 
-* [Profile Page Wireframes](assets/wireframes/TIS-Hackathon-Profile-Page.pdf)
+* [Profile Page Wireframes](static/wireframes/TIS-Hackathon-Profile-Page.pdf)
 
 * [Login Page Wireframes]()
 
