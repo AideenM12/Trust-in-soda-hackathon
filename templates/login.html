@@ -1,4 +1,4 @@
-{% extends 'layout/base.html' %} 
+{% extends 'base.html' %} 
 {% block content %}
 
     <main>
@@ -7,28 +7,37 @@
             <div id="login-wrapper" class="container">
                 <div class="row">
                     <div class="col">
-                        <h1>Log in</h1>
+                        <h1 class=" d-flex justify-content-center">Log in</h1>
                         <hr>
                     </div>
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-11 col-md-6 col-lg-5 col-xl-4 card p-4">
                         <h3>Log in to view or edit your profile</h3>
+                        {% from "_formhelpers.html" import render_field %}
                         <form id="login-form">
-                            <div class="form-group">
+                           <!-- <div class="form-group">
                                 <label for="loginInput">Username</label>
                                 <input type="text" class="form-control" id="loginInput" required>
                             </div>
                             <div class="form-group">
                                 <label for="loginPassword">Password</label>
                                 <input type="password" class="form-control" id="loginPassword" placeholder="Password" required>
-                            </div>
-                            <button type="submit" class="btn btn-search">Log in</button>
+                            </div>-->
+                            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+                             {{render_field(form.username)}}<br>
+                             {{ render_field(form.password) }}<br>
+                             <div class="row">
+                             <div class=" col d-flex mt-1 justify-content-center">
+                            <button type="submit" class="btn btn-search btn-dark">Log in</button>
+                             </div>
+                             </div>
                         </form>
-                        <p class="mt-2">No profile?  <a class="fh-link" href="{{url_for('new_profile_page')}}">Create a profile</a></p>
+                        <p class="mt-2">No profile?  <a class="fh-link" href="#">Create a profile</a></p>
                     </div>
                 </div>
             </div>
         </section>
     </main>   
+    <!--{_for('new_profile_page')}}-->
 {% endblock %}
