@@ -58,6 +58,10 @@ def contact():
 
 
 
+@app.errorhandler(500)
+def server_error(error):
+    return render_template("500.html", error=error), 500
+    
 
 
 @app.errorhandler(404)
