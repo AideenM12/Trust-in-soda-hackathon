@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col">
+             <h3 class="text-center px-4 my-5 py-5"> {{ username }}User's Profile</h3>
+          </div>
+       </div>
+    </div>
+
+    <div class="row">
+        <div class="col l6 offset-l3 s10 offset-s1 ">
+           <div class="card">
+              <div class="card-body justify-content-center ">Welcome User{{ username }}! Here's a summary of all your needs and requirements data that you've shared with us here at Accessible4All. If you have any updates or alterations to be made to this information please click the relevant button below.
+              </div>
+           </div>
+        </div>
+     </div>
+
+     <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col">
+                 <h3 class="text-center px-4 my-5 py-5">Your Information:</h3>
+              </div>
+           </div>
+        </div>
+
+         for profile in profiles 
+        
+           <!----------Basic Data Content---------->
+           <div class="container">
+              <div class="card">
+                  <div class="card-body">
+                    <h3>Basic Data</h3>
+                 <p class="highlight">First Name:</p>
+                 <!--<p> profile.first_name </p>-->
+                 
+                
+                 <p class="highlight">Last Name:</p>
+                 <!--<p> profile.last_name </p>-->
+
+                 <!-- if profile.preferred_pronouns -->
+                 <p class="highlight"> Preferred Pronouns:</p>
+                <!-- <p> profile.preferred_pronouns </p>-->
+                 <!-- endif -->
+                 
+                 <p class="highlight">Date of Birth:</p>
+                 <!--<p> profile.dob </p>-->
+                 
+                 </div>
+                 </div>
+                 </div>
+
+                 <!----------Address Content---------->
+           <div class="container">
+            <div class="card">
+                <div class="card-body">
+                  <h3>Address</h3>
+               <p class="highlight">Number and Street Name:</p>
+               <!--<p> profile.street_name </p>-->
+               
+              
+               <p class="highlight">Locality Name:</p>
+               <!--<p> profile.locality_name </p>-->
+
+              
+               <p class="highlight"> Town:</p>
+              <!-- <p> profile.town </p>-->
+               
+               
+               <p class="highlight">Postcode:</p>
+               <!--<p> profile.postcode </p>-->
+               
+               </div>
+               </div>
+               </div>
+                 
+            for category in categories
+                <!----------Needs/Requirements Content---------->
+           <div class="container">
+            <div class="card">
+                <div class="card-body">
+                  <h3>Needs and Requirements</h3>
+                  
+               <p class="highlight">Number and Street Name:</p>
+               <!--<p> category.street_name </p>-->
+               
+              
+               <p class="highlight">Locality Name:</p>
+               <!--<p> profile.locality_name </p>-->
+
+              
+               <p class="highlight"> Town:</p>
+              <!-- <p> profile.town </p>-->
+               
+               
+               <p class="highlight">Postcode:</p>
+               <!--<p> profile.postcode </p>-->
+
+
+               <button type="submit" class="btn btn-success">
+                Edit
+                <span class="mx-1"><i class="fad fa-paper-plane"></i></span>
+              </button>
+               
+               </div>
+               </div>
+               </div>
+
+
+ 
+{% endblock %}
