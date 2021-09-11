@@ -214,7 +214,7 @@ This palette was created on the [Coolors Website](https://coolors.co).
 
 * [Register Page Wireframes]()
 
-* [Profile Page Wireframes]()
+* [Profile Page Wireframes](assets/wireframes/TIS-Hackathon Profile Page.pdf)
 
 * [Login Page Wireframes]()
 
