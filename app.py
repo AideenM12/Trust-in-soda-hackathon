@@ -23,11 +23,11 @@ mongo = PyMongo(app)
 
 @app.route("/")
 @app.route("/home")
-def home():
+def index():
     """
     Renders home page when main website loaded.
     """
-    return render_template("home.html")
+    return render_template("index.html")
 
 
 @app.route("/profile", methods=["GET", "POST"])
@@ -58,7 +58,15 @@ def contact():
 
 
 
+@app.errorhandler(500)
+def server_error(error):
+    return render_template("500.html", error=error), 500
+    
 
+
+@app.errorhandler(404)
+def error404(e):
+    return render_template('404.html'), 404
 
 
 

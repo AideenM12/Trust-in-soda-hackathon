@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<!----------Main 404 Page Content------->
+<nav>      
+    {% include 'includes/mobile-nav.html' %}   
+       {% include 'includes/main-nav.html' %}  
+     </nav>
+
+    <div class="container justify-content-center">
+        <div class="row justify-content-center">
+            <div class="card justify-content-center px-5 my-5 py-5">
+                <div class="card-body justify-content-center">
+                <h3 class="justify-content-center">404</h3>
+                <h3 class="justify-content-center">Page Not Found!</h3>
+               <a class="justify-content-center" href="{{ url_for('index') }}"> <button type="button" href="{{ url_for('index') }}" class="btn btn-dark justify-content-center ">Home</button></a>
+               </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
