@@ -113,16 +113,39 @@ def subcategories():
 def contact():
     return render_template("contact.html")
 
-
-@app.errorhandler(500)
-def server_error(error):
-    return render_template("500.html", error=error), 500
-
+# Error handlers
 
 @app.errorhandler(404)
-def error404(e):
-    return render_template('404.html'), 404
+def page_not_found(error):
+    """
+    Error handler to display unique message for error 404.
+    """
+    error = 404
+    error_msg = "I'm sorry but the page you looking for doesn't exist!"
+    return render_template("error.html", error=error, error_msg=error_msg), 404
 
+
+@app.errorhandler(500)
+def internal_error(error):
+    """
+    Error handler to display unique message for error 500.
+    """
+    error = 500
+    error_msg = "We're sorry! There is an internal server error.\
+        please try again later."
+    return render_template(
+        "error.html",
+        error=error,
+        error_msg=error_msg), 500
+
+
+@app.errorhandler(Exception)
+def other_exceptions(error):
+    """
+    Error handler to display message for errors other then 404 and 500.
+    """
+    error_msg = "We're sorry but the error above has occurred"
+    return render_template("error.html", error=error, error_msg=error_msg)
 
 # Change to False before submission
 if __name__ == "__main__":
