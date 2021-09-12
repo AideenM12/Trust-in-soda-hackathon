@@ -2,10 +2,17 @@
 {% block content %}
 <main>
 <section>
+   <div class="container-fluid">
+      <div class="row justify-content-right">
+        <div class="col d-flex postion-relative mt-3 px-4 my-5 py-5 ">
+         <a href="{{ url_for('logout') }}"> <button type="button" class="btn btn-dark position-absolute end-0 ">Logout</button></a>
+            </div>
+         </div>
+      </div>
 <div class="container-fluid">
     <div class="row justify-content-center">
       <div class="col">
-             <h3 class="text-center px-4 my-5 py-5"> {{ username }}User's Profile</h3>
+           <h3 class="text-center px-4 my-5 py-5"> {{ username }}'s Profile</h3>
           </div>
        </div>
     </div>
@@ -13,7 +20,7 @@
     <div class="row">
         <div class="col  ">
            <div class="card">
-              <div class="card-body justify-content-center ">Welcome User{{ username }}! Here's a summary of all your needs and requirements data that you've shared with us here at Accessible4All. If you have any updates or alterations to be made to this information please click the relevant button below.
+              <div class="card-body justify-content-center ">Welcome {{ username }}! Here's a summary of all your needs and requirements data that you've shared with us here at Accessible4All. If you have any updates or alterations to be made to this information please click the relevant button below.
               </div>
            </div>
         </div>
@@ -27,7 +34,7 @@
            </div>
         </div>
 
-         for profile in profiles 
+        {% for profile in profiles %}
         
            <!----------Basic Data Content---------->
            <div class="container">
@@ -35,19 +42,19 @@
                   <div class="card-body">
                     <h3>Basic Data</h3>
                  <p class="highlight">First Name:</p>
-                 <!--<p> profile.first_name </p>-->
+                 <p> {{ profile.first_name }} </p>
                  
                 
                  <p class="highlight">Last Name:</p>
-                 <!--<p> profile.last_name </p>-->
+                 <p> {{ profile.last_name }} </p>
 
-                 <!-- if profile.preferred_pronouns -->
+                 {% if profile.preferred_pronouns %}
                  <p class="highlight"> Preferred Pronouns:</p>
-                <!-- <p> profile.preferred_pronouns </p>-->
-                 <!-- endif -->
+                <p>{{ profile.preferred_pronouns }} </p>-->
+                 {% endif %}
                  
                  <p class="highlight">Date of Birth:</p>
-                 <!--<p> profile.dob </p>-->
+                 <p> {{ profile.date_of_birth }} </p>
                  
                  </div>
                  </div>
@@ -59,46 +66,65 @@
                 <div class="card-body">
                   <h3>Address</h3>
                <p class="highlight">Number and Street Name:</p>
-               <!--<p> profile.street_name </p>-->
+               <p> {{ profile.street_name }} </p>-->
                
               
                <p class="highlight">Locality Name:</p>
-               <!--<p> profile.locality_name </p>-->
+               <p> {{ profile.locality_name }} </p>-->
 
               
                <p class="highlight"> Town:</p>
-              <!-- <p> profile.town </p>-->
+              <p> {{ profile.town }} </p>-->
                
                
                <p class="highlight">Postcode:</p>
-               <!--<p> profile.postcode </p>-->
+               <p> {{ profile.postcode }} </p>-->
                
                </div>
                </div>
                </div>
                  
-            for category in categories
+            
                 <!----------Needs/Requirements Content---------->
            <div class="container">
             <div class="card">
                 <div class="card-body">
                   <h3>Needs and Requirements</h3>
                   
-               <p class="highlight">Number and Street Name:</p>
-               <!--<p> category.street_name </p>-->
+                 {% if profile.visual %} 
+               <p class="highlight">Visual:</p>
+               <p> {{ profile.visual }} </p>
+               {% endif %}
                
-              
-               <p class="highlight">Locality Name:</p>
-               <!--<p> profile.locality_name </p>-->
+               {% if profile.auditory %}
+               <p class="highlight">Auditory:</p>
+               <p> {{ profile.auditory }} </p>
+               {% endif %}
+                                          
+               {% if profile.physical %}
+               <p class="highlight">Physical:</p>
+               <p> {{ profile.physical }} </p>
+               {% endif %}
 
-              
-               <p class="highlight"> Town:</p>
-              <!-- <p> profile.town </p>-->
-               
-               
-               <p class="highlight">Postcode:</p>
-               <!--<p> profile.postcode </p>-->
+               {% if profile.cognitive %}
+               <p class="highlight">Cognitive:</p>
+               <p> {{ profile.cognitive }} </p>
+               {% endif %}
 
+               {% if profile.speech %}
+               <p class="highlight">Speech:</p>
+               <p> {{ profile.speech }} </p>
+               {% endif %}
+
+               {% if profile.other %}
+               <p class="highlight">Other:</p>
+               <p> {{ profile.other }} </p>
+               {% endif %}
+
+               {% if profile.none %}
+               <p class="highlight">None:</p>
+               <p> {{ profile.none }} </p>
+               {% endif %}
 
                <button type="submit" class="btn btn-success">
                 Edit

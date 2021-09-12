@@ -38,6 +38,10 @@ input {
     font-size: 1.4rem;
     height: 4rem;
     width: 60%;
+=======
+* {
+  font-family: 'Open Sans', 'sans-serif';
+
 }
 
 input:focus {
@@ -52,12 +56,18 @@ input:focus {
   .hint {
     color: red;
   }
-/*================================== Footer ==================================*/  
-footer a {
-  text-decoration: none;
-  color: #000;
+
+nav img {
+  margin: 0 1em 0 1em;
+  height: 3em;
+  width: auto;
 }
 
+nav li span {
+  margin: 0.5em;
+}
+
+/* ----------------------------------------- Footer*/
 footer {
   position: absolute;
   bottom: 0;
@@ -65,4 +75,20 @@ footer {
   background-color: #333;
   color: #000;
 }
+footer a {
+  text-decoration: none;
+  color: #ffffff;
+}
 
+/* ------------------------------------------ Home page */
+.btn-home {
+  width:100%;
+  display:block;
+  border-color: #000;
+  font-size: 3rem;
+}
+
+.btn-home:hover {
+  background-color: #000;
+  color: #ffffff;
+}
