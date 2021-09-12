@@ -2,10 +2,17 @@
 {% block content %}
 <main>
 <section>
+   <div class="container-fluid">
+      <div class="row justify-content-right">
+        <div class="col d-flex postion-relative mt-3 px-4 my-5 py-5 ">
+         <a href="{{ url_for('logout') }}"> <button type="button" class="btn btn-dark position-absolute end-0 ">Logout</button></a>
+            </div>
+         </div>
+      </div>
 <div class="container-fluid">
     <div class="row justify-content-center">
       <div class="col">
-             <h3 class="text-center px-4 my-5 py-5"> {{ username }}User's Profile</h3>
+           <h3 class="text-center px-4 my-5 py-5"> {{ username }}'s Profile</h3>
           </div>
        </div>
     </div>

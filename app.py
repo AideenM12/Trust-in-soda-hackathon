@@ -190,6 +190,19 @@ def profile(username):
 
 
 
+@app.route("/logout")
+def logout():
+    """
+    Allows users to logout of their profile
+    by removing users from session cookie and redirects
+    to log in page.
+    """
+    flash("You have logged out successfully!")
+    session.pop("user")
+    return redirect(url_for("login"))
+
+
+
 @app.route("/requirements")
 def requirements():
     return render_template("requirements-survey.html")
