@@ -322,7 +322,7 @@ def edit_profile(username):
 
 @ app.route("/subcategories")
 def subcategories():
-    return render_template("disabilities-subcategories.html")
+    return render_template("subcategories.html")
 
 
 @ app.route("/contact", methods = ["GET", "POST"])
