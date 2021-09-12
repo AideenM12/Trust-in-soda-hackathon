@@ -1,0 +1,202 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <h1 class="text-center mt-3">Welcome to AFA</h1>
+    <p class="ms-3">Please check all categories apply to you.</p>
+
+    <form class="mx-3">
+        <fieldset>
+            <legend>Visual impairments</legend>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="blind" id="blind">
+                <label class="form-check-label label-white me-3" for="blind">
+                    Legal blindness
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="low-vision" id="low-vision">
+                <label class="form-check-label label-white me-3" for="low-vision">
+                    Low vision
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="color-blindness" id="color-blindness">
+                <label class="form-check-label label-white me-3" for="color-blindness">
+                    Color blindness
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="other" id="other">
+                <label class="form-check-label label-white me-3" for="other">
+                    Other impairments
+                </label>
+                <div class="input-group mb-3">
+                <label for "other-impairments" class="label-white me-3 mb-3">Please specify:</label>
+                <input type="text" class="form-control" name="other-impairments" id="other-impairments" aria-label="other-impairments">
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Auditory impairments</legend>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="deaf" id="deaf">
+                <label class="form-check-label label-white me-3" for="deaf">
+                    Deaf
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="hoh" id="hoh">
+                <label class="form-check-label label-white me-3" for="hoh">
+                    Hard of hearing
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="other" id="other">
+                <label class="form-check-label label-white me-3" for="other">
+                    Other impairments
+                </label>
+                <div class="input-group mb-3">
+                <label for "other-impairments" class="label-white me-3 mb-3">Please specify:</label>
+                <input type="text" class="form-control" name="other" id="other-impairments" aria-label="other-impairments">
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Physical (motor) impairments</legend>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="mouse" id="mouse">
+                <label class="form-check-label label-white me-3" for="mouse">
+                    Inability to use a mouse
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="mobility" id="mobility">
+                <label class="form-check-label label-white me-3" for="mobility">
+                    Limited mobility
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="motor-control" id="motor-control">
+                <label class="form-check-label label-white me-3" for="motor-control">
+                    Limited motor control
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="slow-response" id="slow-response">
+                <label class="form-check-label label-white me-3" for="slow-response">
+                    Slow response time
+                </label>
+                <div class="input-group mb-3">
+                <label for "other-impairments" class="label-white me-3 mb-3">Please specify:</label>
+                <input type="text" class="form-control" name="other-impairments" id="other-impairments" aria-label="other-impairments">
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Cognitive impairments</legend>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="learning" id="learning">
+                <label class="form-check-label label-white me-3" for="learning">
+                    Learning disabilities
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="distractability" id="distractability">
+                <label class="form-check-label label-white me-3" for="distractability">
+                    Distractability
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="focus" id="focus">
+                <label class="form-check-label label-white me-3" for="focus">
+                    Inability to focus on large amounts of information
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="other" id="other">
+                <label class="form-check-label label-white me-3" for="other">
+                    Other impairments
+                </label>
+                <div class="input-group mb-3">
+                <label for "other-impairments" class="label-white me-3 mb-3">Please specify:</label>
+                <input type="text" class="form-control" name="other-impairments" id="other-impairments" aria-label="other-impairments">
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Speech impairments</legend>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="stutter" id="stutter">
+                <label class="form-check-label label-white me-3" for="stutter">
+                    Stuttering
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="apraxia" id="apraxia">
+                <label class="form-check-label label-white me-3" for="apraxia">
+                    Apraxia
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="dysarthria" id="dysarthria">
+                <label class="form-check-label label-white me-3" for="dysarthria">
+                    Dysarthria
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="articulation" id="articulation">
+                <label class="form-check-label label-white me-3" for="articulation">
+                    Articulation disorders
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="phonemic" id="phonemic">
+                <label class="form-check-label label-white me-3" for="phonemic">
+                    Phonemic disorders
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="mute" id="mute">
+                <label class="form-check-label label-white me-3" for="mute">
+                    Muteness
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="other" id="other">
+                <label class="form-check-label label-white me-3" for="other">
+                    Other impairments
+                </label>
+                <div class="input-group mb-3">
+                <label for "other-impairments" class="label-white me-3 mb-3">Please specify:</label>
+                <input type="text" class="form-control" name="other-impairments" id="other-impairments" aria-label="other-impairments">
+                </div>
+            </div>
+        </fieldset>
+    </form>
+
+{% endblock %}
+
+{% block scripts %}
+  <script type="text/javascript" src="{{ url_for('static', filename='js/hideThemeButtons.js') }}"></script>
+{% endblock %}
