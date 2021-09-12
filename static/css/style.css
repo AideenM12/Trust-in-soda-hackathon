@@ -13,11 +13,19 @@ input:focus {
     color: red;
   }
   
-footer a {
-  text-decoration: none;
-  color: #000;
+/* ----------------------------------------- Header and navbar*/
+nav li {
+  color: #ffffff;
+}
+nav a {
+  color:rgba(256, 256, 256, 256) !important;
 }
 
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ----------------------------------------- Footer*/
 footer {
   position: absolute;
   bottom: 0;
@@ -25,4 +33,7 @@ footer {
   background-color: #333;
   color: #000;
 }
-
+footer a {
+  text-decoration: none;
+  color: #ffffff;
+}
