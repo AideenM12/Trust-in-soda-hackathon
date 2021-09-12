@@ -193,9 +193,27 @@ def profile(username):
     username = user['username']     
     first_name = user['first_name']
     last_name = user['last_name']
+    preferred_pronouns = user['preferred_pronouns']
+    date_of_birth = user['date_of_birth']
+    number_and_street_name = user['number_and_street_name']
+    locality_name = user['locality_name']
+    town = user['town']
+    postcode = user['postcode']
+    visual = user['visual']
+    auditory = user['auditory']
+    physical = user['physical']
+    cognitive = user['cognitive']
+    speech = user['speech']
+    other = user['other']
+    none = user['none']
     if session["user"]:
         return render_template("profile.html", username=username,
-                               first_name=first_name, user=user, last_name=last_name)
+                               first_name=first_name, user=user,
+                               last_name=last_name, preferred_pronouns=preferred_pronouns,
+                               date_of_birth=date_of_birth, number_and_street_name=number_and_street_name,
+                               locality_name=locality_name, town=town, postcode=postcode,
+                               visual=visual, auditory=auditory, physical=physical,
+                               cognitive=cognitive, speech=speech, other=other, none=none)
 
     return redirect(url_for("login"))
 
