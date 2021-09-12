@@ -1,3 +1,4 @@
+// function to apply the alterntive color scheme
 const changeTheme = () => {
     setTheme('theme-blue');
     $('main')
@@ -10,6 +11,7 @@ const changeTheme = () => {
     $('.btn-block').css('color', '#fff');
 }
 
+// function to reapply the default theme
 const defaultTheme = () => {
     setTheme('theme-default');
     $('main')
@@ -25,7 +27,7 @@ toggleBlueButton.addEventListener("click", changeTheme);
 const toggleDefaultButton = document.getElementById('default');
 toggleDefaultButton.addEventListener('click', defaultTheme)
 
-//function to set a given theme/color-scheme
+// function to set a given theme/color-scheme
 function setTheme(themeName) {
     localStorage.setItem('theme', themeName);
     document.documentElement.className = themeName;
