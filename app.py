@@ -175,6 +175,48 @@ def login():
 def requirements():
     return render_template("requirements-survey.html")
 
+@app.route('/insert_profile', methods=['GET', 'POST'])
+def insert_profile():
+    """
+    Take user input from requirements from 
+    and insert into profile collection
+    """
+    profiles = mongo.db.profiles
+
+    if request.method == 'POST':
+        visual = "true" if request.form.get("visual") else "false"
+        auditory = "true" if request.form.get("auditory") else "false"
+        physical = "true" if request.form.get("physical") else "false"
+        cognitive = "true" if request.form.get("cognitive") else "false"
+        speech = "true" if request.form.get("speech") else "false"
+        other = "true" if request.form.get("other") else "false"
+        other_impairments = "true" if request.form.get("other_impairments") else "false"
+        none = "true" if request.form.get("none") else "false"
+
+        profile_details = {
+            'first_name': request.form['first_name'],
+            'last_name': request.form['last_name'],
+            'preferred_pronouns': request.form['preferred_pronouns'],
+            'date_of_birth': request.form['date_of_birth'],
+            'number_and_street_name': request.form['number_and_street_name'],
+            'locality_name': request.form['locality_name'],
+            'town': request.form['town'],
+            'postcode': request.form['postcode'],
+            'visual': visual,
+            'auditory': auditory,
+            'physical': physical,
+            'cognitive': cognitive,
+            'speech': speech,
+            'other': other,
+            'other_impairments': other_impairments,
+            'none': none
+            }
+
+        profiles.insert_one(profile_details)
+
+        return redirect(url_for('profile'))
+
+
 
 @app.route("/subcategories")
 def subcategories():

@@ -4,27 +4,28 @@
     <h1>Welcome to AFA</h1>
     <p>Please fill out the form below and check all needs or requirements that apply to you.</p>
 
-    <form>
+    <form action="{{ url_for('insert_profile') }}" method="POST">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
         <fieldset>
             <legend>Basic data</legend>
             <div class="input-group mb-3">
                 <label for "first-name">First name:</label>
-                <input type="text" class="form-control" name="first-name" id="first-name" aria-label="first-name" aria-describedby="required-message" required>
+                <input type="text" class="form-control" name="first_name" id="first-name" aria-label="first-name" aria-describedby="required-message" required>
             </div>
 
             <div class="input-group mb-3">
                 <label for "last-name">Last name:</label>
-                <input type="text" class="form-control" name="last-name" id="last-name" aria-label="last-name" aria-describedby="required-message" required>
+                <input type="text" class="form-control" name="last_name" id="last-name" aria-label="last-name" aria-describedby="required-message" required>
             </div>
 
             <div class="input-group mb-3">
                 <label for "preferred-pronouns">Preferred pronouns:</label>
-                <input type="text" class="form-control" name="preferred-pronouns" id="preferred-pronouns" aria-label="preferred-pronouns">
+                <input type="text" class="form-control" name="preferred_pronouns" id="preferred-pronouns" aria-label="preferred-pronouns">
             </div>
 
             <div class="input-group mb-3">
                 <label for="date-of-birth" class="form-label">Date of birth:</label>
-                <input type="text" class="form-control" name="date-of-birth" id="date-of-birth" aria-describedby="required-message" required />
+                <input type="text" class="form-control" name="date_of_birth" id="date-of-birth" aria-describedby="required-message" required />
             </div>
         </fieldset>
 
@@ -32,12 +33,12 @@
             <legend>Address</legend>
             <div class="input-group mb-3">
                 <label for "number-and-street-name">Number and street name:</label>
-                <input type="text" class="form-control" name="number-and-street-name" id="number-and-street-name" aria-label="number-and-street-name" aria-describedby="required-message" required>
+                <input type="text" class="form-control" name="number_and_street_name" id="number-and-street-name" aria-label="number-and-street-name" aria-describedby="required-message" required>
             </div>
 
             <div class="input-group mb-3">
                 <label for "locality-name">Locality name (if required):</label>
-                <input type="text" class="form-control" name="locality-name" id="locality-name" aria-label="locality-name">
+                <input type="text" class="form-control" name="locality_name" id="locality-name" aria-label="locality-name">
             </div>
 
             <div class="input-group mb-3">
@@ -54,59 +55,63 @@
         <fieldset>
             <legend>Needs or requirements</legend>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="visual" id="visual">
+                <input class="form-check-input" name="visual" type="checkbox"  id="visual">
                 <label class="form-check-label" for="visual">
                     Visual impairments
                 </label>
             </div>
 
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="auditory" id="auditory">
+                <input class="form-check-input" name="auditory" type="checkbox" id="auditory">
                 <label class="form-check-label" for="auditory">
                     Auditory impairments
                 </label>
             </div>
 
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="physical" id="physical">
+                <input class="form-check-input" name="physical" type="checkbox"  id="physical">
                 <label class="form-check-label" for="physical">
                     Physical (motor) impairments
                 </label>
             </div>
 
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="cognitive" id="cognitive">
+                <input class="form-check-input" name="cognitive" type="checkbox"  id="cognitive">
                 <label class="form-check-label" for="cognitive">
                     Cognitive impairments
                 </label>
             </div>
 
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="speech" id="speech">
+                <input class="form-check-input" name="speech" type="checkbox" id="speech">
                 <label class="form-check-label" for="auditory">
                     Speech impairments
                 </label>
             </div>
 
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="other" id="other">
+                <input class="form-check-input" name="other" type="checkbox" id="other">
                 <label class="form-check-label" for="other">
                     Other impairments
                 </label>
                 <div class="input-group mb-3">
                 <label for "other-impairments">Please specify:</label>
-                <input type="text" class="form-control" name="other-impairments" id="other-impairments" aria-label="other-impairments">
+                <input type="text" class="form-control" name="other_impairments" id="other-impairments" aria-label="other-impairments">
             </div>
             </div>
 
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="none" id="none">
+                <input class="form-check-input" name="none" type="checkbox" id="none">
                 <label class="form-check-label" for="none">
                     None
                 </label>
             </div>
         </fieldset>
         <div id="required-message" class="hidden">This field is required.</div>
+
+        <button class="btn btn-success" type="submit">
+            Upload Profile
+        </button>
     </form>
 
 {% endblock %}
