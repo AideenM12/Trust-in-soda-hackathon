@@ -255,8 +255,11 @@ def subcategories():
     return render_template("disabilities-subcategories.html")
 
 
-@app.route("/contact")
+@app.route("/contact", methods=["GET", "POST"])
 def contact():
+    if request.method == "POST":
+        flash("Thanks {}, we have received your message!".format(
+            request.form.get('name')))
     return render_template("contact.html")
 
 # Error handlers

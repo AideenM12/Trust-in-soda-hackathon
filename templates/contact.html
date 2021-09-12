@@ -5,20 +5,24 @@
 
 {% block content %}
 
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-  <script>
-    (function () {
-      emailjs.init("user_aosfmrTwHuvejaJ77uzB4");
-    })();
-  </script>
-
 <!-- Font Awesome -->
 <script src="https://kit.fontawesome.com/f2a080f561.js" crossorigin="anonymous"></script>
+
+{% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul class="flashes"></ul>
+                        {% for message in messages %}
+                            <li class="text-center no-bullet">{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
 
 <div class="container-fluid">
     <div class="row justify-content-center">
       <div class="col">
-        <form onsubmit="return sendMail(this);" class="px-4 my-5 py-5">
+        <form method="POST" class="px-4 my-5 py-5">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
           <h1 class="text-center">Contact us</h1>
           <p>
             Do you have questions or feedback regarding our site? Are there
@@ -55,30 +59,8 @@
     </div>
   </div>
 
-  <!-- Modal -->
-  <div class="modal fade" id="message-sent" tabindex="-1" role="dialog" aria-labelledby="message-sent-label"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3 class="modal-title" id="message-sent-label">
-            Your message has been sent! Thank you. We will reach out
-            to you soon.
-          </h3>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-            Close
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-
 {% endblock %}
 
 {% block scripts %}
 <script type="text/javascript" src="{{ url_for('static', filename='js/hideThemeButtons.js') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='js/sendEmail.js') }}"></script>
 {% endblock %}
