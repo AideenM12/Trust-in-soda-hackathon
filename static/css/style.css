@@ -1,65 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 
-/*================================== General Styling ==================================*/
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-html {
-    font-size: 62.5%;
-}
-
-body {
-    font-size: 1.6rem; 
-}
-
-html,
-body {
-    width: 100%;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 400;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-}
-
-.theme-blue {
-  background-color: #3a6596;
-  color: #ffffff;
-}
-
-.theme-default {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-h3 {
-    font-size: 3rem;
-}
-
-input {
-    border: 1px solid;
-}
-
-.btn {
-    font-size: 1.4rem;
-    height: 4rem;
-    width: 60%;
-}
-
 * {
   font-family: 'Open Sans', 'sans-serif';
-
 }
 
 input:focus {
     outline: 2px solid royalblue;
     box-shadow: 1px 1px 8px 1px royalblue;
   }
-
   .hidden {
     display: none
   }
@@ -68,9 +16,17 @@ input:focus {
     color: red;
   }
   
-/* ----------------------------------------- Header and navbar*
-
->>>>>>> Stashed changes
+/* ----------------------------------------- Header and navbar*/
+nav li {
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+nav a {
+  color:rgba(256, 256, 256, 256) !important;
+}
+nav a:hover {
+  text-decoration: underline;
+}
 
 nav img {
   margin: 0 1em 0 1em;
@@ -95,7 +51,17 @@ footer a {
   color: #ffffff;
 }
 
-/* ------------------------------------------ Home page */
+.theme-blue {
+  background-color: #3a6596;
+  color: #ffffff;
+}
+
+.theme-default {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* ------------------------------------------ Btns */
 .btn-home {
   width:100%;
   display:block;
@@ -107,3 +73,9 @@ footer a {
   background-color: #000;
   color: #ffffff;
 }
+
+#themeSelectors button {
+  width:100%;
+  display:block;
+}
+
