@@ -1,4 +1,7 @@
 {% extends 'base.html' %}
+{% block header %}
+    {% include 'includes/main-nav.html' %}
+{% endblock %}
 {% block content %}
 <div class="justify-content-center mt-5 pt-5">
     <div class="row align-items-center">
@@ -10,22 +13,22 @@
                 </div>
             </div>
         </div>
-        <div id="themeSelectors" class="row text-center my-4">
-            <div class="col-12 fs-3">Choose a blueish theme or revert to default theme:</div>
-            <div class="col-12 col-md-3"><button type="button" id="Blue"
-                    class="btn btn-primary col-8 text__shadow--dark">Blue</button>
+        <div id="themeSelectors" class="row justify-content-center text-center my-4">
+            <div class="col-12 fs-2 mb-5">Choose a blueish theme or revert to default theme:</div>
+            <div class="col-6 col-md-3"><button type="button" role="button" id="Blue"
+                    class="btn btn-primary text-center col-4 text__shadow--dark">Blue</button>
             </div>
-            <div class="col-12 col-md-3"><button type="button" id="default"
-                    class="btn btn-dark col-8 text__shadow--dark">Default
+            <div class="col-6 col-md-3"><button type="button" role="button" id="default"
+                    class="btn btn-dark col-4 text-center text__shadow--dark">Default
                 </button>
             </div>
         </div>
         <div class="row justify-content-center mt-5 cb-btn--rows">
             <div class="col-5 col-md-4 text-center">
-                <a href="{{url_for('registration')}}"class="btn btn-lg btn-block">Register</a>
+                <a href="{{url_for('registration')}}"class="btn btn-lg btn-block fs-2">Register</a>
             </div>
             <div class="col-5 col-md-4 text-center">
-                <a href="{{ url_for('login') }}" class="btn btn-lg btn-block">Login</a>
+                <a href="{{ url_for('login') }}" class="btn btn-lg btn-block fs-2">Login</a>
             </div>
         </div>
     </div>

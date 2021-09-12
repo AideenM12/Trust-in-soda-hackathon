@@ -1,5 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 
+/*================================== General Styling ==================================*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem; 
+}
+
+html,
+body {
+    width: 100%;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+input {
+    border: 1px solid;
+}
+
+.btn {
+    font-size: 1.4rem;
+    height: 4rem;
+    width: 60%;
+}
+
 input:focus {
     outline: 2px solid royalblue;
     box-shadow: 1px 1px 8px 1px royalblue;
@@ -12,7 +52,7 @@ input:focus {
   .hint {
     color: red;
   }
-  
+/*================================== Footer ==================================*/  
 footer a {
   text-decoration: none;
   color: #000;
