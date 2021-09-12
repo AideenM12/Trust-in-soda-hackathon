@@ -1,24 +1,40 @@
 <div class="container-fluid mb-5"></div>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="{{ url_for('index') }}"><img src="static/doc-images/logo.jpg" alt="logo"></a>
+        <a class="navbar-brand" href="{% if not session.user %} {{ url_for('index') }} {% else %}
+        {{ url_for('profile', username=session['user']) }} {% endif %}"><img src="static/doc-images/logo.jpg" alt="logo"></a>
         <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
+                {% if not session.user %}
                 <li class="nav-item active pr-2">
                     <a class="nav-link" href="{{ url_for('index') }}"><span>Home</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('registration') }}"><span>Register</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url_for('login') }}"><span>Login</span></a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('registration') }}"><span>Register</span></a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="{{ url_for('contact') }}"><span>Contact</span></a>
                 </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href=""><span>Contact</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href=""><span>Requirements Survey</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href=""><span>Contact</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('logout') }}"><span>Logout</span></a>
+                </li>
+                {% endif %}
             </ul>
         </div>
     </nav>
