@@ -1,30 +1,30 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    <h1>Welcome to AFA</h1>
-    <p>Please fill out the form below and check all needs or requirements that apply to you.</p>
+    <h1 class="text-center mt-3">Welcome to AFA</h1>
+    <p class="ms-3">Please fill out the form below and check all needs or requirements that apply to you.</p>
 
-    <form action="{{ url_for('insert_profile') }}" method="POST">
+    <form class="mx-3" action="{{ url_for('insert_profile') }}" method="POST">
         <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
         <fieldset>
             <legend>Basic data</legend>
             <div class="input-group mb-3">
-                <label for "first-name">First name:</label>
+                <label for "first-name" class="label-white me-3">First name:</label>
                 <input type="text" class="form-control" name="first_name" id="first-name" aria-label="first-name" aria-describedby="required-message" required>
             </div>
 
             <div class="input-group mb-3">
-                <label for "last-name">Last name:</label>
+                <label for "last-name" class="label-white me-3">Last name:</label>
                 <input type="text" class="form-control" name="last_name" id="last-name" aria-label="last-name" aria-describedby="required-message" required>
             </div>
 
             <div class="input-group mb-3">
-                <label for "preferred-pronouns">Preferred pronouns:</label>
+                <label for "preferred-pronouns" class="label-white me-3">Preferred pronouns:</label>
                 <input type="text" class="form-control" name="preferred_pronouns" id="preferred-pronouns" aria-label="preferred-pronouns">
             </div>
 
             <div class="input-group mb-3">
-                <label for="date-of-birth" class="form-label">Date of birth:</label>
+                <label for="date-of-birth" class="form-label label-white me-3">Date of birth:</label>
                 <input type="text" class="form-control" name="date_of_birth" id="date-of-birth" aria-describedby="required-message" required />
             </div>
         </fieldset>
@@ -32,22 +32,22 @@
         <fieldset>
             <legend>Address</legend>
             <div class="input-group mb-3">
-                <label for "number-and-street-name">Number and street name:</label>
+                <label for "number-and-street-name" class="label-white me-3">Number and street name:</label>
                 <input type="text" class="form-control" name="number_and_street_name" id="number-and-street-name" aria-label="number-and-street-name" aria-describedby="required-message" required>
             </div>
 
             <div class="input-group mb-3">
-                <label for "locality-name">Locality name (if required):</label>
+                <label for "locality-name" class="label-white me-3">Locality name (if required):</label>
                 <input type="text" class="form-control" name="locality_name" id="locality-name" aria-label="locality-name">
             </div>
 
             <div class="input-group mb-3">
-                <label for "town">Town:</label>
+                <label for "town" class="label-white me-3">Town:</label>
                 <input type="text" class="form-control" name="town" id="postcode" aria-label="town" aria-describedby="required-message" required>
             </div>
 
             <div class="input-group mb-3">
-                <label for "postcode">Postcode:</label>
+                <label for "postcode" class="label-white me-3">Postcode:</label>
                 <input type="text" class="form-control" name="postcode" id="postcode" aria-label="postcode" aria-describedby="required-message" required>
             </div>
         </fieldset>
@@ -56,53 +56,53 @@
             <legend>Needs or requirements</legend>
             <div class="form-check">
                 <input class="form-check-input" name="visual" type="checkbox"  id="visual">
-                <label class="form-check-label" for="visual">
+                <label class="form-check-label label-white me-3" for="visual">
                     Visual impairments
                 </label>
             </div>
 
             <div class="form-check">
                 <input class="form-check-input" name="auditory" type="checkbox" id="auditory">
-                <label class="form-check-label" for="auditory">
+                <label class="form-check-label label-white me-3" for="auditory">
                     Auditory impairments
                 </label>
             </div>
 
             <div class="form-check">
                 <input class="form-check-input" name="physical" type="checkbox"  id="physical">
-                <label class="form-check-label" for="physical">
+                <label class="form-check-label label-white me-3" for="physical">
                     Physical (motor) impairments
                 </label>
             </div>
 
             <div class="form-check">
                 <input class="form-check-input" name="cognitive" type="checkbox"  id="cognitive">
-                <label class="form-check-label" for="cognitive">
+                <label class="form-check-label label-white me-3" for="cognitive">
                     Cognitive impairments
                 </label>
             </div>
 
             <div class="form-check">
                 <input class="form-check-input" name="speech" type="checkbox" id="speech">
-                <label class="form-check-label" for="auditory">
+                <label class="form-check-label label-white me-3" for="auditory">
                     Speech impairments
                 </label>
             </div>
 
             <div class="form-check">
                 <input class="form-check-input" name="other" type="checkbox" id="other">
-                <label class="form-check-label" for="other">
+                <label class="form-check-label label-white me-3 mb-3" for="other">
                     Other impairments
                 </label>
                 <div class="input-group mb-3">
-                <label for "other-impairments">Please specify:</label>
-                <input type="text" class="form-control" name="other_impairments" id="other-impairments" aria-label="other-impairments">
+                <label for "other-impairments" class="label-white me-3">Please specify:</label>
+                <input type="text" class="form-control label-white me-3" name="other_impairments" id="other-impairments" aria-label="other-impairments">
             </div>
             </div>
 
             <div class="form-check">
                 <input class="form-check-input" name="none" type="checkbox" id="none">
-                <label class="form-check-label" for="none">
+                <label class="form-check-label label-white me-3" for="none">
                     None
                 </label>
             </div>
