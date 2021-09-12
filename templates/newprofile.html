@@ -7,7 +7,7 @@
 <main>
     <!-- Section: Create an account -->
     <section>
-        <div id="create-account-wrapper" class="container mt-5 text-center">
+        <div id="create-account-wrapper" class="container mt-5">
             <div class="row ">
                 <div class="col-12 mt-3">
                     <h1>Create an account</h1>
@@ -24,9 +24,9 @@
 
                     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
 
-                    {{render_field(form.username)}}
-                    {{render_field(form.email)}}
-                    {{render_field(form.password)}}
+                    {{render_field(form.username, class="w-100 mb-3")}}<br>
+                    {{render_field(form.email, class="w-100 mb-3")}}<br>
+                    {{render_field(form.password, class="w-100 mb-3")}}<br>
                         <!--div class="form-group">
                             <label for="newUsername">Username</label>
                             <input id="newUsername" type="text" class="form-control" maxlength="40"
@@ -42,7 +42,7 @@
                             <input id="newPasswordInput" type="password" class="form-control" maxlength="20" minlength="8"
                                 placeholder="Password" required>
                         </div-->
-                        <button id="newAccountSubmit" type="submit" class="btn btn-search">Create Profile</button>
+                        <button id="newAccountSubmit" type="submit" class="btn btn-search btn-dark">Create Profile</button>
                     </form>
                     {% if error %}
                         <p class="error"><strong>Error:</strong>{{error}}</p>
