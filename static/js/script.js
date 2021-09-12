@@ -1,22 +1,20 @@
 const changeTheme = () => {
-    $('body')
-    .css('background-color', '#3a6596')
-    .css('color', '#ffffff');
-    $('#Blue')
-    .removeClass('btn-primary')
-    .addClass('btn-light')
-    .css('color', ('#3a6596'));
-    $('.btn-block').css('color', '#ffffff');
+    setTheme('theme-blue');
+    $('main')
+    .addClass('theme-blue')
+    .removeClass('theme-default');
+    console.log('blue');
+    $('.stay-black').css('color', '#000');
+    $('label').css('color', '#000');
+    $('.btn-block').css('color', '#fff');
 }
 
 const defaultTheme = () => {
-    $('body')
-    .css('background-color', '#ffffff')
-    .css('color', '#000');
-    $('#Blue')
-    .removeClass('btn-light')
-    .addClass('btn-primary')
-    .css('color', ('#fff'));
+    setTheme('theme-default');
+    $('main')
+    .addClass('theme-default')
+    .removeClass('theme-blue');
+    console.log('default');
     $('.btn-block').css('color', '#000');
 }
 
@@ -25,3 +23,19 @@ toggleBlueButton.addEventListener("click", changeTheme);
 
 const toggleDefaultButton = document.getElementById('default');
 toggleDefaultButton.addEventListener('click', defaultTheme)
+
+//function to set a given theme/color-scheme
+function setTheme(themeName) {
+    localStorage.setItem('theme', themeName);
+    document.documentElement.className = themeName;
+}
+
+// set theme to default for first time visitors or apply theme stored in local storage
+function checkTheme() {
+    if (localStorage.getItem("theme") === "") {
+        defaultTheme();
+    } else if (localStorage.getItem("theme") === "theme-blue") {
+        changeTheme();
+    } 
+}
+checkTheme();

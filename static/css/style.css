@@ -26,6 +26,16 @@ body {
     scroll-behavior: smooth;
 }
 
+.theme-blue {
+  background-color: #3a6596;
+  color: #ffffff;
+}
+
+.theme-default {
+  background-color: #ffffff;
+  color: #000000;
+}
+
 h3 {
     font-size: 3rem;
 }
@@ -38,7 +48,8 @@ input {
     font-size: 1.4rem;
     height: 4rem;
     width: 60%;
-=======
+}
+
 * {
   font-family: 'Open Sans', 'sans-serif';
 
@@ -56,6 +67,10 @@ input:focus {
   .hint {
     color: red;
   }
+  
+/* ----------------------------------------- Header and navbar*
+
+>>>>>>> Stashed changes
 
 nav img {
   margin: 0 1em 0 1em;
