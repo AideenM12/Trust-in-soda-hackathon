@@ -59,6 +59,8 @@ class LoginForm(Form):
     username = TextField('Username')
     password = PasswordField('Password')
 
+    
+
 
 """
 End Credit
@@ -165,6 +167,8 @@ def login():
     return render_template("login.html", title='Login', form=form)
 
 
+
+
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     """
@@ -175,10 +179,15 @@ def profile(username):
     """
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
+    articles = list(mongo.db.articles.find(
+        {"created_by": session["user"]}).sort("_id", -1))
+
     if session["user"]:
-        return render_template("profile.html", username=username)
+        return render_template("profile.html", username=username,
+                               articles=articles)
 
     return redirect(url_for("login"))
+
 
 
 @app.route("/requirements")
