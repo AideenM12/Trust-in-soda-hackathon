@@ -1,0 +1,8 @@
+{% extends 'base.html' %} 
+{% block content %}
+
+{% for test in test_collection %}
+<strong>{{ test.test_data }}</strong>
+{% endfor %}
+
+{% endblock %}
