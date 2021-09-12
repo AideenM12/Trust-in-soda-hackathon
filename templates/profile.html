@@ -35,7 +35,7 @@
            </div>
         </div>
 
-        {% for profile in profiles %}
+
         
            <!----------Basic Data Content---------->
            <div class="container">
@@ -43,19 +43,17 @@
                   <div class="card-body">
                     <h3>Basic Data</h3>
                  <p class="highlight">First Name:</p>
-                 <p> {{ profile.first_name }} </p>
+                 <p class="highlight">{{ first_name }}</p>
                  
+              
                 
                  <p class="highlight">Last Name:</p>
-                 <p> {{ profile.last_name }} </p>
-
-                 {% if profile.preferred_pronouns %}
+                 
                  <p class="highlight"> Preferred Pronouns:</p>
-                <p>{{ profile.preferred_pronouns }} </p>-->
-                 {% endif %}
+                
                  
                  <p class="highlight">Date of Birth:</p>
-                 <p> {{ profile.date_of_birth }} </p>
+                 <p>  </p>
                  
                  </div>
                  </div>
@@ -67,19 +65,19 @@
                 <div class="card-body">
                   <h3>Address</h3>
                <p class="highlight">Number and Street Name:</p>
-               <p> {{ profile.street_name }} </p>-->
+               
                
               
                <p class="highlight">Locality Name:</p>
-               <p> {{ profile.locality_name }} </p>-->
+               
 
               
                <p class="highlight"> Town:</p>
-              <p> {{ profile.town }} </p>-->
+            
                
                
                <p class="highlight">Postcode:</p>
-               <p> {{ profile.postcode }} </p>-->
+               
                
                </div>
                </div>
@@ -92,124 +90,9 @@
                 <div class="card-body">
                   <h3>Needs and Requirements</h3>
                   
-                 {% if profile.visual %} 
-               <p class="highlight">Visual:</p>
-               <p> {{ profile.visual }} </p>
-               {% endif %}
-
-               {% if visual.low_vision == "on" %}
-               <p>{{ visual.low_vision }}</p>
-               {% endif %}
-
-               {% if visual.color_blindness == "on" %}
-               <p>{{ visual.color_blindness }}</p>
-               {% endif %}
-               {% if visual.blind == "on" %}
-               <p>{{ visual.blind }}</p>
-               {% endif %}
-               {% if visual.other == "on" %}
-               <p>{{ visual.other }}</p>
-               {% endif %}
-               {% endif %}
                
 
-
-
-               {% if profile.auditory %}
-               <p class="highlight">Auditory:</p>
-               <p> {{ profile.auditory }} </p>
-
-               {% if auditory.deaf == "on" %}
-               <p>{{ auditory.deaf }}</p>
-               {% endif %}
-               {% if auditory.hoh == "on" %}
-               <p>{{ auditory.hoh }}</p>
-               {% endif %}
-               {% if auditory.other == "on" %}
-               <p>{{ auditory.other }}</p>
-               {% endif %}
-               {% endif %}
-                                          
-               {% if profile.physical %}
-               <p class="highlight">Physical:</p>
-               <p> {{ profile.physical }} </p>
-
-               {% if physical.mobility == "on" %}
-               <p>{{ physical.mobility }}</p>
-               {% endif %}
-
-               {% if physical.motor_control == "on" %}
-               <p>{{ physical.motor_control }}</p>
-               {% endif %}
-               {% if physical.mouse == "on" %}
-               <p>{{ physical.mouse }}</p>
-               {% endif %}
-               {% if physical.slow_response == "on" %}
-               <p>{{ physical.slow_response }}</p>
-               {% endif %}
-               {% if physical.other == "on" %}
-               <p>{{ physical.other }}</p>
-               {% endif %}
-               {% endif %}
-
-               {% if profile.cognitive %}
-               <p class="highlight">Cognitive:</p>
-               <p> {{ profile.cognitive }} </p>
                
-               {% if physical.mobility == "on" %}
-               <p>{{ physical.mobility }}</p>
-               {% endif %}
-
-               {% if physical.motor_control == "on" %}
-               <p>{{ physical.motor_control }}</p>
-               {% endif %}
-               {% if physical.mouse == "on" %}
-               <p>{{ physical.mouse }}</p>
-               {% endif %}
-               {% if physical.slow_response == "on" %}
-               <p>{{ physical.slow_response }}</p>
-               {% endif %}
-               {% if physical.other == "on" %}
-               <p>{{ physical.other }}</p>
-               {% endif %}
-               {% endif %}
-
-               {% if profile.speech %}
-               <p class="highlight">Speech:</p>
-               <p> {{ profile.speech }} </p>
-
-               {% if speech.stutter == "on" %}
-               <p>{{ speech.stutter }}</p>
-               {% endif %}
-               {% if speech.apraxia == "on" %}
-               <p>{{ speech.apraxia }}</p>
-               {% endif %}
-               {% if speech.dysarthria == "on" %}
-               <p>{{ speech.dysarthria }}</p>
-               {% endif %}
-               {% if speech.articulation == "on" %}
-               <p>{{ speech.articulation }}</p>
-               {% endif %}
-               {% if speech.phonemic == "on" %}
-               <p>{{ speech.phonemic }}</p>
-               {% endif %}
-               {% if speech.mute == "on" %}
-               <p>{{ speech.mute }}</p>
-               {% endif %}
-               {% if speech.other == "on" %}
-               <p>{{ speech.other }}</p>
-               {% endif %}
-               {% endif %}
-
-               {% if profile.other %}
-               <p class="highlight">Other:</p>
-               <p> {{ profile.other }} </p>
-               {% endif %}
-
-               {% if profile.none %}
-               <p class="highlight">None:</p>
-               <p> {{ profile.none }} </p>
-               {% endif %}
 
                <button type="submit" class="btn btn-success">
                 Edit
