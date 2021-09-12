@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <h1>Welcome to AFA</h1>
+    <p>Please fill out the form below and check all needs or requirements that apply to you.</p>
+
+    <form action="{{ url_for('edit_profile', username=session['user'])) }}" method="POST">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+        <legend>Basic data</legend>
+        <div class="input-group mb-3">
+            <label for "first-name">First name:</label>
+            <input type="text" class="form-control" name="first_name" id="first-name" aria-label="first-name" aria-describedby="required-message" required>
+            {{ first_name }}
+        </div>
+
+        <div class="input-group mb-3">
+            <label for "last-name">Last name:</label>
+            <input type="text" class="form-control" name="last_name" id="last-name" aria-label="last-name" aria-describedby="required-message" required>
+            {{ last_name }}
+        </div>
+        <div id="required-message" class="hidden">This field is required.</div>
+
+        <button class="btn btn-success" type="submit">
+            Upload Profile
+        </button>
+    </form>
+
+{% endblock %}
+
+{% block scripts %}
+  <script type="text/javascript" src="{{ url_for('static', filename='js/hideThemeButtons.js') }}"></script>
+{% endblock %}

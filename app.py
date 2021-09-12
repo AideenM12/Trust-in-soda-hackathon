@@ -188,9 +188,9 @@ def profile(username):
     """
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-   
+
     user = mongo.db.users.find_one({'username': session['user']})
-    username = user['username']     
+    username = user['username']
     first_name = user['first_name']
     last_name = user['last_name']
     preferred_pronouns = user['preferred_pronouns']
@@ -248,7 +248,8 @@ def insert_profile():
         cognitive = "true" if request.form.get("cognitive") else "false"
         speech = "true" if request.form.get("speech") else "false"
         other = "true" if request.form.get("other") else "false"
-        other_impairments = "true" if request.form.get("other_impairments") else "false"
+        other_impairments = "true" if request.form.get(
+            "other_impairments") else "false"
         none = "true" if request.form.get("none") else "false"
         user = mongo.db.users
         # Resource: Set Operator -
@@ -275,19 +276,56 @@ def insert_profile():
                  }}
         )
         user = mongo.db.users.find_one({'username': session['user']})
-        username = user['username']     
+        username = user['username']
         first_name = user['first_name']
         if session['user']:
             return render_template('profile.html', username=username,
-                                    first_name=first_name, user=user)
+                                   first_name=first_name, user=user)
 
 
-@app.route("/subcategories")
+@app.route("/edit_profile/<username>", methods=["GET", "POST"])
+def edit_profile(username):
+    if request.method == "POST":
+        submit = {
+            "username": session["user"],
+            'first_name': request.form('first_name'),
+            'last_name': request.form['last_name'],
+            'preferred_pronouns': request.form['preferred_pronouns'],
+            'date_of_birth': request.form['date_of_birth'],
+            'number_and_street_name': request.form['number_and_street_name'],
+            'locality_name': request.form['locality_name'],
+            'town': request.form['town'],
+            'postcode': request.form['postcode'],
+            'visual': request.form['visual'],
+            'auditory': request.form['auditory'],
+            'physical': request.form['physical'],
+            'cognitive': request.form['cognitive'],
+            'speech': request.form['speech'],
+            'other': request.form['other'],
+            'other_impairments': request.form['other_impairments'],
+            'none': request.form['none']
+        }
+        mongo.db.users.update({"username": session["user"]}), submit)
+        flash("Profile Successfully Updated")
+        return redirect(url_for("profile", username=session["user"]))
+
+    user=mongo.db.users.find_one({"username": session["user"]})
+    username=user["username"]
+    return render_template("edit-profile.html", username = username,
+                            first_name = first_name, user = user,
+                            last_name = last_name, preferred_pronouns = preferred_pronouns,
+                            date_of_birth = date_of_birth, number_and_street_name = number_and_street_name,
+                            locality_name = locality_name, town = town, postcode = postcode,
+                            visual = visual, auditory = auditory, physical = physical,
+                            cognitive = cognitive, speech = speech, other = other, none = none)
+
+
+@ app.route("/subcategories")
 def subcategories():
     return render_template("disabilities-subcategories.html")
 
 
-@app.route("/contact", methods=["GET", "POST"])
+@ app.route("/contact", methods = ["GET", "POST"])
 def contact():
     if request.method == "POST":
         flash("Thanks {}, we have received your message!".format(
@@ -298,41 +336,42 @@ def contact():
 # Error handlers
 
 
-@app.errorhandler(404)
+@ app.errorhandler(404)
 def page_not_found(error):
     """
     Error handler to display unique message for error 404.
     """
-    error = 404
-    error_msg = "I'm sorry but the page you looking for doesn't exist!"
-    return render_template("error.html", error=error, error_msg=error_msg), 404
+    error=404
+    error_msg="I'm sorry but the page you looking for doesn't exist!"
+    return render_template("error.html", error = error,
+                           error_msg = error_msg), 404
 
 
-@app.errorhandler(500)
+@ app.errorhandler(500)
 def internal_error(error):
     """
     Error handler to display unique message for error 500.
     """
-    error = 500
-    error_msg = "We're sorry! There is an internal server error.\
+    error=500
+    error_msg="We're sorry! There is an internal server error.\
         please try again later."
     return render_template(
         "error.html",
-        error=error,
-        error_msg=error_msg), 500
+        error = error,
+        error_msg = error_msg), 500
 
 
-@app.errorhandler(Exception)
+@ app.errorhandler(Exception)
 def other_exceptions(error):
     """
     Error handler to display message for errors other then 404 and 500.
     """
-    error_msg = "We're sorry but the error above has occurred"
-    return render_template("error.html", error=error, error_msg=error_msg)
+    error_msg="We're sorry but the error above has occurred"
+    return render_template("error.html", error = error, error_msg = error_msg)
 
 
 # Change to False before submission
 if __name__ == "__main__":
-    app.run(host=os.environ.get("IP"),
-            port=int(os.environ.get("PORT")),
-            debug=True)
+    app.run(host = os.environ.get("IP"),
+            port = int(os.environ.get("PORT")),
+            debug = True)

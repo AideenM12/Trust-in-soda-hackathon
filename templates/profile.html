@@ -104,10 +104,10 @@
 
                
 
-               <button type="submit" class="btn btn-success">
+               <a href="{{ url_for('edit_profile', username=session['user']) }}"><button type="submit" class="btn btn-success">
                 Edit
                 <span class="mx-1"><i class="fad fa-paper-plane"></i></span>
-              </button>
+              </button></a>
                
                </div>
                </div>
