@@ -212,15 +212,25 @@ This palette was created on the [Coolors Website](https://coolors.co).
 
 * The wireframe mockup links can be found below:
 
-* [Home Page Wireframes]()
+* [Home Page Wireframes for Desktop](static/doc-images/wireframes/home-page-desktop.png)
 
-* [Contact Page Wireframes](static/wireframes/TIS-contact-wireframe.pdf)
+* [Home Page Wireframes for Mobile](static/doc-images/wireframes/home-page-mobile.png)
+
+* [Contact Page Wireframes](static/doc-images/wireframes/TIS-contact-wireframe.pdf)
 
 * [Register Page Wireframes]()
 
-* [Profile Page Wireframes](static/wireframes/TIS-Hackathon-Profile-Page.pdf)
+* [Profile Page Wireframes](static/doc-images/wireframes/TIS-Hackathon-Profile-Page.pdf)
 
-* [Login Page Wireframes]()
+* [Login Page Wireframes for Desktop](static/doc-images/wireframes/login-desktop.png)
+
+* [Login Page Wireframes for Mobile](static/doc-images/wireframes/login-mobile.png)
+
+* [Requirements Page Wireframes for Desktop and Mobile](static/doc-images/wireframes/disabilities-1.png)
+
+* [Disabilities Subcategories Page Wireframes for Desktop and Mobile](static/doc-images/wireframes/disabilities-2.png)
+
+
 
 
 
@@ -234,6 +244,7 @@ This palette was created on the [Coolors Website](https://coolors.co).
 ### Sitemap
 * The sitemap was created using [Balsamiq wireframes](https://balsamiq.com/)
 
+!!!The path is wrong and the file can't be found!!!
 * A link to the [Sitemap can be found here](assets/documentation/wireframes/MS3-sitemap-wireframe.pdf)
 
 ## Technologies Used
@@ -250,6 +261,7 @@ This palette was created on the [Coolors Website](https://coolors.co).
     - Heroku was used as a cloud based platform to deploy this site.
 - [Google fonts](https://fonts.google.com/) 
     - The font styles used on this website were chosen from Google fonts.
+    !!! Did we use that? !!!
 - [Materializecss](https://materializecss.com/)
    - Various aspects of this website were structured using Materialize.
    - Materialize was used to make this website responsive
