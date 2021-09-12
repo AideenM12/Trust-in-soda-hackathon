@@ -46,7 +46,6 @@ def test():
     return render_template("test.html", test_collection=test_collection)
 
 
-
 """
 The below code was taken from
 https://wtforms.readthedocs.io/en/stable/crash_course/
@@ -130,6 +129,7 @@ def contact():
 
 # Error handlers
 
+
 @app.errorhandler(404)
 def page_not_found(error):
     """
@@ -161,6 +161,7 @@ def other_exceptions(error):
     """
     error_msg = "We're sorry but the error above has occurred"
     return render_template("error.html", error=error, error_msg=error_msg)
+
 
 # Change to False before submission
 if __name__ == "__main__":
