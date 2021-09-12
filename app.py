@@ -59,8 +59,6 @@ class LoginForm(Form):
     username = TextField('Username')
     password = PasswordField('Password')
 
-    
-
 
 """
 End Credit
@@ -91,8 +89,6 @@ class RegistrationForm(Form):
         validators.Regexp(r'^\w+$', message=(
             "Password must contain only letters numbers or underscore"))
     ])
-
-    
 
 
 """
@@ -182,8 +178,6 @@ def login():
     return render_template("login.html", title='Login', form=form)
 
 
-
-
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     """
@@ -204,7 +198,6 @@ def profile(username):
     return redirect(url_for("login"))
 
 
-
 @app.route("/logout")
 def logout():
     """
@@ -217,15 +210,15 @@ def logout():
     return redirect(url_for("login"))
 
 
-
 @app.route("/requirements")
 def requirements():
     return render_template("requirements-survey.html")
 
+
 @app.route('/insert_profile', methods=['GET', 'POST'])
 def insert_profile():
     """
-    Take user input from requirements from 
+    Take user input from requirements from
     and insert into profile collection
     """
     profiles = mongo.db.profiles
@@ -264,7 +257,6 @@ def insert_profile():
         return redirect(url_for('profile'))
 
 
-
 @app.route("/subcategories")
 def subcategories():
     return render_template("disabilities-subcategories.html")
@@ -276,6 +268,7 @@ def contact():
         flash("Thanks {}, we have received your message!".format(
             request.form.get('name')))
     return render_template("contact.html")
+
 
 # Error handlers
 
