@@ -286,7 +286,11 @@ This palette was created on the [Coolors Website](https://coolors.co).
 - [Coolors.co](https://coolors.co/)
     - Coolors.co was used to create the project's color palette.
 - [StackOverflow](https://stackoverflow.com/)
-    - Stack Overflow was used as a general reference resource. 
+    - Stack Overflow was used as a general reference resource.
+- [Looka](https://looka.com/)
+	- Looka was used to create the website logo.     
+- [TinyPNG](https://tinypng.com/)
+	- Tiny PNG was used for image compression.    
 
 ## Testing
 Testing information can be found here in the separate [TESTING.md file](TESTING.md)
@@ -370,7 +374,7 @@ Once the project been loaded into the IDE it is necessary to install the necessa
 ## Credits
 
 ### Media
-
+- [Favicon image](https://github.com/AideenM12/Trust-in-soda-hackathon/tree/main/static/doc-images/favicon) by <a href="https://www.pngwing.com/en/free-png-ynqbo">pngwing.com</a>
 
 
 ### Content
