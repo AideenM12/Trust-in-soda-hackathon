@@ -32,7 +32,7 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/home")
+@app.route("/index")
 def index():
     """
     Renders home page when main website loaded.
