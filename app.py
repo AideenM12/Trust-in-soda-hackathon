@@ -121,7 +121,22 @@ def registration():
                 "username": request.form.get("username").lower(),
                 "email": request.form.get("email").lower(),
                 "password": generate_password_hash(
-                    request.form.get("password"))
+                    request.form.get("password")),
+                "first_name": "",
+                "last_name": "",
+                "preferred_pronouns": "",
+                "date_of_birth": "",
+                "number_and_street_name": "",
+                "locality_name": "",
+                "town": "",
+                "postcode": "",
+                "visual": "",
+                "auditory": "",
+                "physical": "",
+                "cognitive": "",
+                "speech": "",
+                "other": "",
+                "none": ""
             }
             mongo.db.users.insert_one(signup)
 
@@ -179,12 +194,12 @@ def profile(username):
     """
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    articles = list(mongo.db.articles.find(
-        {"created_by": session["user"]}).sort("_id", -1))
+    profiles = list(mongo.db.profiles.find(
+        {"username": session["user"]}).sort("_id", -1))
 
     if session["user"]:
         return render_template("profile.html", username=username,
-                               articles=articles)
+                               profiles=profiles)
 
     return redirect(url_for("login"))
 
