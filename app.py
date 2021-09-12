@@ -305,13 +305,13 @@ def edit_profile(username):
             'other_impairments': request.form['other_impairments'],
             'none': request.form['none']
         }
-         mongo.db.users.update({"username": session["user"]}), submit)
-         flash("Profile Successfully Updated")
-         return redirect(url_for("profile", username=session["user"]))
+        mongo.db.users.update({"username": session["user"]}), submit)
+        flash("Profile Successfully Updated")
+        return redirect(url_for("profile", username=session["user"]))
 
-     user=mongo.db.users.find_one({"username": session["user"]})
-     username=user["username"]
-     return render_template("edit-profile.html", username = username,
+    user=mongo.db.users.find_one({"username": session["user"]})
+    username=user["username"]
+    return render_template("edit-profile.html", username = username,
                             first_name = first_name, user = user,
                             last_name = last_name, preferred_pronouns = preferred_pronouns,
                             date_of_birth = date_of_birth, number_and_street_name = number_and_street_name,
