@@ -11,15 +11,54 @@
         * [Test Case 8](#Test-Case-8)
         * [Test Case 9](#Test-Case-9)
    * [Testing Features](#Testing-Features)
-        * [Navigation](#Navigation)
+        * [Navigation](#Navigation)  
+          * Plan
+
+          Make the site easy to navigate by providing a navbar and using easily understandable names for the pages.
+
+          * Implementation
+
+          The Bootstrap navbar with a fixed top position was used. On mobile devices we also used Bootstrap to make the navbar collapse and be displayed within the hamburger sign.
+
+          * Test
+
+          We tested all links on all pages and with different browsers to make sure that the correct site is displayed.
+
+          * Result
+
+          Each site is reachable from every page and on every browser.
+
+          * Verdict
+
+          Working as intended.
+
         * [Footer](#Footer)        
-        * [Social Media Links](#Social-Media-Links)
         * [Home Page Features](#Home-Page-Features)
         * [Login Page Features](#Login-Page-Features)
         * [Sign-Up Page Features](#Sign-Up-Page-Features)
         * [Profile Page Features](#Profile-Page-Features)
         * [Log Out Features](#Log-Out-Features)
         * [404 Page](#404-Page)
+          * Plan
+
+          Give the user the opportunity to return to the homepage if an invalid URL has been entered.
+
+          * Implementation
+
+          ???
+
+          * Test
+
+          Deliberately use wrong subdomain-names.
+
+          * Result
+
+          The 404 page is displayed and the user can use the provided link to return to the main page.
+
+          * Verdict
+
+          Working as intended.
+
         * [500 Page](#500-Page)
         * [Features exclusive to Admin](#Features-exclusive-to-Admin)
     * [Validators](#Validators)
@@ -27,7 +66,11 @@
          * [HTML Pages](#HTML-Pages)
          * [Data Sensitive HTML Pages](#Data-Sensitive-HTML-Pages)
        * [CSS](#CSS)
+
        * [Javascript](#Javascript)
+          [JSHint](https://jshint.com/) 
+          No errors have been reported.
+
    * [Manual Testing of Route Handlers](#Manual-Testing-of-Route-Handlers)
        
    * [Known Bugs and Issues](#Known-Bugs-and-Issues)

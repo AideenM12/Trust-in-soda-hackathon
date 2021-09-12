@@ -1,35 +1,31 @@
 // function to apply the alterntive color scheme
 const changeTheme = () => {
-    setTheme('theme-blue');
-    $('main')
-    .addClass('theme-blue')
-    .removeClass('theme-default');
-    console.log('blue');
-    $('.stay-black').css('color', '#000');
-    $('label').css('color', '#000');
-    $('.label-white').css('color', '#fff');
-    $('.btn-block').css('color', '#fff');
-}
+    setTheme("theme-blue");
+    $("main").addClass("theme-blue").removeClass("theme-default");
+    console.log("blue");
+    $(".stay-black").css("color", "#000");
+    $("label").css("color", "#000");
+    $(".label-white").css("color", "#fff");
+    $(".btn-block").css("color", "#fff");
+};
 
 // function to reapply the default theme
 const defaultTheme = () => {
-    setTheme('theme-default');
-    $('main')
-    .addClass('theme-default')
-    .removeClass('theme-blue');
-    console.log('default');
-    $('.btn-block').css('color', '#000');
-}
+    setTheme("theme-default");
+    $("main").addClass("theme-default").removeClass("theme-blue");
+    console.log("default");
+    $(".btn-block").css("color", "#000");
+};
 
-const toggleBlueButton = document.getElementById('Blue');
+const toggleBlueButton = document.getElementById("Blue");
 toggleBlueButton.addEventListener("click", changeTheme);
 
-const toggleDefaultButton = document.getElementById('default');
-toggleDefaultButton.addEventListener('click', defaultTheme)
+const toggleDefaultButton = document.getElementById("default");
+toggleDefaultButton.addEventListener("click", defaultTheme);
 
 // function to set a given theme/color-scheme
 function setTheme(themeName) {
-    localStorage.setItem('theme', themeName);
+    localStorage.setItem("theme", themeName);
     document.documentElement.className = themeName;
 }
 
@@ -39,6 +35,6 @@ function checkTheme() {
         defaultTheme();
     } else if (localStorage.getItem("theme") === "theme-blue") {
         changeTheme();
-    } 
+    }
 }
 checkTheme();
