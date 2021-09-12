@@ -19,8 +19,8 @@
                         <h3 class="stay-black">Log in to view or edit your profile</h3>
                         {% from "_formhelpers.html" import render_field %}
                         <form method="POST" method="POST" action="{{ url_for('login') }}"><input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
-                            {{render_field(form.username)}}<br>
-                            {{ render_field(form.password) }}<br>
+                            {{render_field(form.username, class="w-100 mb-3")}}<br>
+                            {{ render_field(form.password, class="w-100 mb-3") }}<br>
                             <div class="row">
                             <div class=" col d-flex mt-1 justify-content-center">
                           <button type="submit" class="btn btn-search btn-dark">Log in</button>
