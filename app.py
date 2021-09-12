@@ -266,7 +266,7 @@ def insert_profile():
 
 @app.route("/subcategories")
 def subcategories():
-    return render_template("disabilities-subcategories.html")
+    return render_template("subcategories.html")
 
 
 @app.route("/contact", methods=["GET", "POST"])
