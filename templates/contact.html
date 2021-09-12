@@ -9,14 +9,14 @@
 <script src="https://kit.fontawesome.com/f2a080f561.js" crossorigin="anonymous"></script>
 
 {% with messages = get_flashed_messages() %}
-                {% if messages %}
-                    <ul class="flashes"></ul>
-                        {% for message in messages %}
-                            <li class="text-center no-bullet">{{ message }}</li>
-                        {% endfor %}
-                    </ul>
-                {% endif %}
-            {% endwith %}
+  {% if messages %}
+    <ul class="flashes"></ul>
+      {% for message in messages %}
+        <li class="text-center no-bullet">{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
 
 <div class="container-fluid">
     <div class="row justify-content-center">

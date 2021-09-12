@@ -1,7 +1,19 @@
+/*----- GOOGLE FONTS -----*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 
 * {
   font-family: 'Open Sans', 'sans-serif';
+}
+
+/*----- THEMES -----*/
+.theme-default {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.theme-blue {
+  background-color: #3a6596;
+  color: #ffffff;
 }
 
 input:focus {
@@ -12,11 +24,7 @@ input:focus {
     display: none
   }
   
-  .hint {
-    color: red;
-  }
-  
-/* ----------------------------------------- Header and navbar*/
+/*----- HEADER, NAVBAR -----*/
 nav li {
   color: #ffffff;
   font-size: 1.5rem;
@@ -38,7 +46,7 @@ nav li span {
   margin: 0.5em;
 }
 
-/* ----------------------------------------- Footer*/
+/*----- FOOTER -----*/
 footer {
   position: absolute;
   bottom: 0;
@@ -51,17 +59,7 @@ footer a {
   color: #ffffff;
 }
 
-.theme-blue {
-  background-color: #3a6596;
-  color: #ffffff;
-}
-
-.theme-default {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-/* ------------------------------------------ Btns */
+/*----- BUTTONS -----*/
 .btn-home {
   width:100%;
   display:block;
@@ -79,6 +77,7 @@ footer a {
   display:block;
 }
 
+/*----- LISTITEMS -----*/
 .no-bullet {
   list-style-type: none;
 }
