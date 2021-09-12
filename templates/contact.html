@@ -18,18 +18,18 @@
           </p>
 
           <div class="mb-3">
-            <label for="name" class="form-label">Your name:</label>
+            <label for="name" class="form-label label-white">Your name:</label>
             <input type="text" class="form-control" name="name" id="name" required />
           </div>
 
           <div class="mb-3">
-            <label for="emailAddress" class="form-label">Email address:</label>
+            <label for="emailAddress" class="form-label label-white">Email address:</label>
             <input type="email" class="form-control" name="emailAddress" id="emailAddress" required />
 
           </div>
           
           <div class="mb-3">
-            <label for="query" class="form-label">Your query:</label>
+            <label for="query" class="form-label label-white">Your query:</label>
             <textarea class="form-control" placeholder="Leave your query here" name="query" id="query" rows="6"
               required></textarea>
           </div>
@@ -47,4 +47,8 @@
     </div>
   </div>
 
+{% endblock %}
+
+{% block scripts %}
+  <script type="text/javascript" src="{{ url_for('static', filename='js/hideThemeButtons.js') }}"></script>
 {% endblock %}

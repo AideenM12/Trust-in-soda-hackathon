@@ -6,6 +6,7 @@ const changeTheme = () => {
     console.log('blue');
     $('.stay-black').css('color', '#000');
     $('label').css('color', '#000');
+    $('.label-white').css('color', '#fff');
     $('.btn-block').css('color', '#fff');
 }
 
