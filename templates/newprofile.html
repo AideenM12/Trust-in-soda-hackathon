@@ -1,12 +1,15 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
+{% block header %}
+    {% include 'includes/main-nav.html' %}
+{% endblock %} 
 {% block content %}
 
 <main>
     <!-- Section: Create an account -->
     <section>
-        <div id="create-account-wrapper" class="container">
-            <div class="row">
-                <div class="col-12">
+        <div id="create-account-wrapper" class="container mt-5 text-center">
+            <div class="row ">
+                <div class="col-12 mt-3">
                     <h1>Create an account</h1>
                     <hr>
                 </div>

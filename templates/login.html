@@ -1,10 +1,13 @@
 {% extends 'base.html' %} 
+{% block header %}
+    {% include 'includes/main-nav.html' %}
+{% endblock %}
 {% block content %}
 
     <main>
         <!-- Section: Log in -->
         <section>
-            <div id="login-wrapper" class="container">
+            <div id="login-wrapper" class="container mt-5">
                 <div class="row">
                     <div class="col">
                         <h1 class=" d-flex justify-content-center">Log in</h1>
