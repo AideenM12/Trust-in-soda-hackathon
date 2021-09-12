@@ -192,9 +192,10 @@ def profile(username):
     user = mongo.db.users.find_one({'username': session['user']})
     username = user['username']     
     first_name = user['first_name']
+    last_name = user['last_name']
     if session["user"]:
         return render_template("profile.html", username=username,
-                               first_name=first_name, user=user)
+                               first_name=first_name, user=user, last_name=last_name)
 
     return redirect(url_for("login"))
 
