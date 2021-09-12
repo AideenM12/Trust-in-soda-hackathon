@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 
+* {
+  font-family: 'Open Sans', 'sans-serif';
+}
+
 input:focus {
     outline: 2px solid royalblue;
     box-shadow: 1px 1px 8px 1px royalblue;
@@ -16,6 +20,7 @@ input:focus {
 /* ----------------------------------------- Header and navbar*/
 nav li {
   color: #ffffff;
+  font-size: 1.5rem;
 }
 nav a {
   color:rgba(256, 256, 256, 256) !important;
@@ -23,6 +28,16 @@ nav a {
 
 nav a:hover {
   text-decoration: underline;
+}
+
+nav img {
+  margin: 0 1em 0 1em;
+  height: 3em;
+  width: auto;
+}
+
+nav li span {
+  margin: 0.5em;
 }
 
 /* ----------------------------------------- Footer*/
@@ -35,5 +50,18 @@ footer {
 }
 footer a {
   text-decoration: none;
+  color: #ffffff;
+}
+
+/* ------------------------------------------ Home page */
+.btn-home {
+  width:100%;
+  display:block;
+  border-color: #000;
+  font-size: 3rem;
+}
+
+.btn-home:hover {
+  background-color: #000;
   color: #ffffff;
 }
