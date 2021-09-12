@@ -45,16 +45,14 @@
                  <p class="highlight">First Name:</p>
                  <p class="highlight">{{ first_name }}</p>
                  
-              
-                
                  <p class="highlight">Last Name:</p>
-                 <p>{{ last_name }}</p>
+                 <p class="highlight">{{ last_name }}</p>
                  
                  <p class="highlight"> Preferred Pronouns:</p>
-                
+                 <p class="highlight">{{ preferred_pronouns }}</p>
                  
                  <p class="highlight">Date of Birth:</p>
-                 <p>  </p>
+                 <p class="highlight">{{ date_of_birth }}</p>
                  
                  </div>
                  </div>
@@ -66,19 +64,19 @@
                 <div class="card-body">
                   <h3>Address</h3>
                <p class="highlight">Number and Street Name:</p>
+               <p class="highlight">{{ number_and_street }}</p>
                
-               
-              
+         
                <p class="highlight">Locality Name:</p>
-               
+               <p class="highlight">{{ locality_name }}</p>
 
               
-               <p class="highlight"> Town:</p>
-            
-               
-               
+               <p class="highlight">Town:</p>
+               <p class="highlight">{{ town }}</p>
+              
+
                <p class="highlight">Postcode:</p>
-               
+               <p class="highlight">{{ postcode }}</p>
                
                </div>
                </div>
@@ -90,6 +88,17 @@
             <div class="card">
                 <div class="card-body">
                   <h3>Needs and Requirements</h3>
+                  <ul>
+                     <li>{{ visual }}</li>
+                     <li>{{ auditory }}</li>
+                     <li>{{ physical}}</li>
+                     <li>{{ cognitive }}</li>
+                     <li>{{ speech }}</li>
+                     <li>{{ other }}</li>
+                     <li>{{ none }}</li>
+                     
+                     
+                  </ul>
                   
                
 
