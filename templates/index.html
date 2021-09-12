@@ -10,6 +10,16 @@
                 </div>
             </div>
         </div>
+        <div id="themeSelectors" class="row text-center my-4">
+            <div class="col-12 fs-3">Choose a blueish theme or revert to default theme:</div>
+            <div class="col-12 col-md-3"><button type="button" id="Blue"
+                    class="btn btn-primary col-8 text__shadow--dark">Blue</button>
+            </div>
+            <div class="col-12 col-md-3"><button type="button" id="default"
+                    class="btn btn-dark col-8 text__shadow--dark">Default
+                </button>
+            </div>
+        </div>
         <div class="row justify-content-center mt-5 cb-btn--rows">
             <div class="col-5 col-md-4 text-center">
                 <a href="{{url_for('registration')}}"class="btn btn-lg btn-block">Register</a>
@@ -20,5 +30,12 @@
         </div>
     </div>
 </div>
+
+{% block scripts %}
+    <!--Load jQuery...-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+{% endblock %}
+
 {% include 'includes/footer.html' %}
 {% endblock %}
