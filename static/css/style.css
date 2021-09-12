@@ -79,3 +79,6 @@ footer a {
   display:block;
 }
 
+.no-bullet {
+  list-style-type: none;
+}
