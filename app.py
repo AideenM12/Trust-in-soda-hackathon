@@ -64,6 +64,74 @@ class LoginForm(Form):
 End Credit
 """
 
+"""
+The below code was found on
+https://pythonprogramming.net/flask-registration-tutorial/
+"""
+
+
+class RegistrationForm(Form):
+    """
+    Form fields and validators for registration,
+    WTForms is used to validate the registration form fields.
+    """
+    username = TextField('Username',
+                         [validators.Length(min=4, max=20,
+                          message="Username max length 20 characters"),
+                          validators.Regexp(r'^\w+$', message=(
+                              "Username must contain only letters "
+                              "numbers or underscore"))])
+
+    email = TextField('Email Address', [validators.Length(min=6, max=50)])
+
+    password = PasswordField('Password', [
+        validators.InputRequired(),
+        validators.Regexp(r'^\w+$', message=(
+            "Password must contain only letters numbers or underscore"))
+    ])
+
+    
+
+
+"""
+End Credit
+"""
+
+
+@app.route("/registration", methods=["GET", "POST"])
+def registration():
+    """
+    Allows users to sign up to the site, create an account profile
+    and send data to the database
+    """
+    try:
+        form = RegistrationForm(request.form)
+
+        if request.method == 'POST' and form.validate():
+            existing_user = mongo.db.users.find_one(
+                {"username": request.form.get("username").lower()})
+
+            if existing_user:
+                flash("Username already exists")
+                return redirect(url_for("registration"))
+
+            signup = {
+                "username": request.form.get("username").lower(),
+                "email": request.form.get("email").lower(),
+                "password": generate_password_hash(
+                    request.form.get("password"))
+            }
+            mongo.db.users.insert_one(signup)
+
+            session["user"] = request.form.get("username").lower()
+            flash('You have signed up successfully!')
+            return redirect(url_for("profile", username=session['user']))
+
+        return render_template('newprofile.html', form=form)
+
+    except Exception as e:
+        return (str(e))
+
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
