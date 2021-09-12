@@ -117,7 +117,22 @@ def registration():
                 "username": request.form.get("username").lower(),
                 "email": request.form.get("email").lower(),
                 "password": generate_password_hash(
-                    request.form.get("password"))
+                    request.form.get("password")),
+                "first_name": "",
+                "last_name": "",
+                "preferred_pronouns": "",
+                "date_of_birth": "",
+                "number_and_street_name": "",
+                "locality_name": "",
+                "town": "",
+                "postcode": "",
+                "visual": "",
+                "auditory": "",
+                "physical": "",
+                "cognitive": "",
+                "speech": "",
+                "other": "",
+                "none": ""
             }
             mongo.db.users.insert_one(signup)
 
@@ -173,12 +188,14 @@ def profile(username):
     """
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    articles = list(mongo.db.articles.find(
-        {"created_by": session["user"]}).sort("_id", -1))
-
+   
+    user = mongo.db.users.find_one({'username': session['user']})
+    username = user['username']     
+    first_name = user['first_name']
+    last_name = user['last_name']
     if session["user"]:
         return render_template("profile.html", username=username,
-                               articles=articles)
+                               first_name=first_name, user=user, last_name=last_name)
 
     return redirect(url_for("login"))
 
@@ -206,9 +223,7 @@ def insert_profile():
     Take user input from requirements from
     and insert into profile collection
     """
-    profiles = mongo.db.profiles
-
-    if request.method == 'POST':
+    if request.method == "POST":
         visual = "true" if request.form.get("visual") else "false"
         auditory = "true" if request.form.get("auditory") else "false"
         physical = "true" if request.form.get("physical") else "false"
@@ -217,29 +232,36 @@ def insert_profile():
         other = "true" if request.form.get("other") else "false"
         other_impairments = "true" if request.form.get("other_impairments") else "false"
         none = "true" if request.form.get("none") else "false"
-
-        profile_details = {
-            'first_name': request.form['first_name'],
-            'last_name': request.form['last_name'],
-            'preferred_pronouns': request.form['preferred_pronouns'],
-            'date_of_birth': request.form['date_of_birth'],
-            'number_and_street_name': request.form['number_and_street_name'],
-            'locality_name': request.form['locality_name'],
-            'town': request.form['town'],
-            'postcode': request.form['postcode'],
-            'visual': visual,
-            'auditory': auditory,
-            'physical': physical,
-            'cognitive': cognitive,
-            'speech': speech,
-            'other': other,
-            'other_impairments': other_impairments,
-            'none': none
-            }
-
-        profiles.insert_one(profile_details)
-
-        return redirect(url_for('profile'))
+        user = mongo.db.users
+        # Resource: Set Operator -
+        # https://docs.mongodb.com/manual/reference/operator/update/set/
+        user.update(
+            {"username": session["user"]},
+            {"$set":
+                {'first_name': request.form('first_name'),
+                 'last_name': request.form['last_name'],
+                 'preferred_pronouns': request.form['preferred_pronouns'],
+                 'date_of_birth': request.form['date_of_birth'],
+                 'number_and_street_name': request.form['number_and_street_name'],
+                 'locality_name': request.form['locality_name'],
+                 'town': request.form['town'],
+                 'postcode': request.form['postcode'],
+                 'visual': visual,
+                 'auditory': auditory,
+                 'physical': physical,
+                 'cognitive': cognitive,
+                 'speech': speech,
+                 'other': other,
+                 'other_impairments': other_impairments,
+                 'none': none
+                 }}
+        )
+        user = mongo.db.users.find_one({'username': session['user']})
+        username = user['username']     
+        first_name = user['first_name']
+        if session['user']:
+            return render_template('profile.html', username=username,
+                                    first_name=first_name, user=user)
 
 
 @app.route("/subcategories")
