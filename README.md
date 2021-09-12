@@ -98,6 +98,7 @@ The live website can be viewed [here](https://motherfolklore.herokuapp.com/)
 7. Edit profile functionality
 8. Allow user to submit a form with information about them disabilities
 9. Receive form submission confirmation 
+10. Ability for users to select an alternative color scheme
 
 
 | -   | Planed Feature                                                     | Importance | Viability/Feasibility |
@@ -111,6 +112,7 @@ The live website can be viewed [here](https://motherfolklore.herokuapp.com/)
 | 7   | Edit profile functionality                     | 4          | 5                     |
 | 8   | Allow user to fill a form with information about them disabilities and send it to ther admint  | 5          | 4                     |
 9   | Receive form submission confirmation  | 4          | 4                     |
+10  | Alternative color scheme              | 2           | 4
 
 # Structure
 
@@ -121,8 +123,10 @@ The live website can be viewed [here](https://motherfolklore.herokuapp.com/)
 * Footer
 * Social Media Icons
 
-### Home page features:
 
+### Home page features:
+* Alternative color scheme:
+Users can choose between the default theme and an alternative theme. The theme selection is saved to local storage and applied on all pages.
 
 
 
@@ -179,7 +183,7 @@ The live website can be viewed [here](https://motherfolklore.herokuapp.com/)
 
 ### Colors
 
-* The colors of this site were chosen 
+* The colors of this site were chosen for contrast. They also should not be a distraction for the user. For the alternative theme we chose a blue hue because blue is the richest color across all types of colour blindness. For text color we chose white for maximum contrast with the background. 
 
 This palette was created on the [Coolors Website](https://coolors.co).
 
