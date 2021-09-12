@@ -47,5 +47,9 @@
         </section>
     </main>   
     <!--{_for('new_profile_page')}}-->
+    
 {% endblock %}
 
+{% block scripts %}
+  <script type="text/javascript" src="{{ url_for('static', filename='js/hideThemeButtons.js') }}"></script>
+{% endblock %}

@@ -2,6 +2,7 @@
 {% block header %}
     {% include 'includes/main-nav.html' %}
 {% endblock %}
+
 {% block content %}
 <div class="justify-content-center mt-5 pt-5">
     <div class="col text-center">
@@ -23,11 +24,10 @@
     </div>
 </div>
 
-{% block scripts %}
-    <!--Load jQuery...-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    
-{% endblock %}
+
+    {% block scripts %}
+        
+    {% endblock %}
 
 {% include 'includes/footer.html' %}
 {% endblock %}
