@@ -1,7 +1,7 @@
 <div class="container-fluid mb-5">
     <nav class="navbar afa-navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <a class="navbar-brand" href="{% if not session.user %} {{ url_for('index') }} {% else %}
-        {{ url_for('profile', username=session['user']) }} {% endif %}"><img src="static/doc-images/logo.jpg" alt="logo"></a>
+        {{ url_for('profile', username=session['user']) }} {% endif %}"><img src="/static/doc-images/logo.jpg" alt="logo"></a>
         <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
