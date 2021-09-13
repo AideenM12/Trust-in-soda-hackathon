@@ -4,7 +4,7 @@
 {% endblock %} 
 {% block content %}
 
-<main>
+
     <!-- Section: Create an account -->
     <section>
         <div id="create-account-wrapper" class="container mt-5">
@@ -55,10 +55,10 @@
             </div>
         </div>
     </section>   
-</main>
+
 
 {% endblock %}
 
 {% block scripts %}
-  <script type="text/javascript" src="{{ url_for('static', filename='js/hideThemeButtons.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/hideThemeButtons.js') }}"></script>
 {% endblock %}
