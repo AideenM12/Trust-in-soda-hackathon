@@ -64,8 +64,29 @@
     * [Validators](#Validators)
       * [HTML Validators](#HMTL-Validators)
          * [HTML Pages](#HTML-Pages)
+        Home page:
+        No errors are reported. There are two warnings about lacking section headings.
+
+        Registration page:
+        No errors are reported. There are two warnings about lacking section headings.
+
+        Login page:
+        No errors are reported. There are two warnings about lacking section headings.
+
+        Contact page:
+        No errors are reported. There are two warnings about lacking section headings.
+
+        Requirements page: 
+        No errors are reported. There are two warnings about lacking section headings.
+
+        Subcategories page:
+        No errors are reported. There are two warnings about lacking section headings.
+
          * [Data Sensitive HTML Pages](#Data-Sensitive-HTML-Pages)
        * [CSS](#CSS)
+
+      [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+      Results: When using 'validate by direct input' no errors are found.
 
        * [Javascript](#Javascript)
           [JSHint](https://jshint.com/) 
