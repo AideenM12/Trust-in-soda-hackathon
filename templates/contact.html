@@ -18,10 +18,10 @@
   {% endif %}
 {% endwith %}
 
-<div class="container-fluid">
+<div class="container-fluid contact-container text center">
     <div class="row justify-content-center">
-      <div class="col">
-        <form method="POST" class="px-4 my-5 py-5">
+      <div class="col-11 col-md-8 col-xlg-6 text-center mt-5">
+        <form method="POST" class="px-4 my-5 py-5 form-contact ">
           <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
           <h1 class="text-center">Contact us</h1>
           <p>
@@ -46,11 +46,11 @@
               required></textarea>
           </div>
 
-          <button type="submit" class="btn btn-success">
+          <button type="submit" class="btn btn-contact-submit">
             Submit
             <span class="mx-1"><i class="fad fa-paper-plane"></i></span>
           </button>
-          <button type="reset" class="btn btn-danger">
+          <button type="reset" class="btn btn-contact-clear">
             Clear form
             <span class="ml-1"><i class="fal fa-trash-alt"></i></span>
           </button>
