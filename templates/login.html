@@ -4,7 +4,6 @@
 {% endblock %}
 {% block content %}
 
-    <main>
         <!-- Section: Log in -->
         <section>
             <div id="login-wrapper" class="container mt-5">
@@ -18,7 +17,7 @@
                     <div class="col-11 col-md-6 col-lg-5 col-xl-4 card p-4">
                         <h3 class="stay-black">Log in to view or edit your profile</h3>
                         {% from "_formhelpers.html" import render_field %}
-                        <form method="POST" method="POST" action="{{ url_for('login') }}"><input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+                        <form method="POST" action="{{ url_for('login') }}"><input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
                             {{render_field(form.username, class="w-100 mb-3")}}<br>
                             {{ render_field(form.password, class="w-100 mb-3") }}<br>
                             <div class="row">
@@ -43,13 +42,12 @@
                             </div>
                     </div>
                 </div>
-            </div>
         </section>
-    </main>   
+   
     <!--{_for('new_profile_page')}}-->
     {% include 'includes/footer.html' %}
 {% endblock %}
 
 {% block scripts %}
-  <script type="text/javascript" src="{{ url_for('static', filename='js/hideThemeButtons.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/hideThemeButtons.js') }}"></script>
 {% endblock %}
