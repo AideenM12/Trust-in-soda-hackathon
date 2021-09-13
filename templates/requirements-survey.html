@@ -9,10 +9,10 @@
     </ul>
     <div class="row justify-content-center mt-5">
         <div class="col-8 col-md-4 text-center">
-            <a class="justify-content-center" href="{{ url_for('profile', username=session['user']) }}"> <button type="button" href="{{ url_for('index') }}" class="btn btn-dark justify-content-center ">Back to Profile</button></a>
+            <a href="{{ url_for('profile', username=session['user']) }}" class="btn btn-dark"> Profile <i
+                class="fas fa-undo"></i></a>
         </div>
     </div>
-
     <form class="mx-auto col-10 col-md-8" action="{{ url_for('insert_profile') }}" method="POST">
         <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
         <fieldset>
