@@ -7,25 +7,29 @@
         <li>All fields marked "required" must be completed.</li>
         <li>Dates should all be typed in the format mm/dd/yy, (as in 21/07/2013)</li>
     </ul>
+    <div class="row justify-content-center mt-5">
+        <div class="col-8 col-md-4 text-center">
+            <a class="justify-content-center" href="{{ url_for('profile', username=session['user']) }}"> <button type="button" href="{{ url_for('index') }}" class="btn btn-dark justify-content-center ">Back to Profile</button></a>
+        </div>
+    </div>
 
     <form class="mx-auto col-10 col-md-8" action="{{ url_for('insert_profile') }}" method="POST">
         <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
         <fieldset>
             <legend>Basic data</legend>
             <div class="input-group mb-3">
-                <label for "first-name" class="label-white me-3">First name (required):</label>
+                <label for="first-name" class="label-white me-3">First name (required):</label>
                 <input type="text" class="form-control" name="first_name" id="first-name" aria-label="first-name" aria-describedby="f-name" required>
                 <span id="f-name" aria-live="assertive"></span>
             </div>
-
             <div class="input-group mb-3">
-                <label for "last-name" class="label-white me-3">Last name (required):</label>
+                <label for="last-name" class="label-white me-3">Last name (required):</label>
                 <input type="text" class="form-control" name="last_name" id="last-name" aria-label="last-name" aria-describedby="l-name" required>
                 <span id="l-name" aria-live="assertive"></span>
             </div>
 
             <div class="input-group mb-3">
-                <label for "preferred-pronouns" class="label-white me-3">Preferred pronouns:</label>
+                <label for="preferred-pronouns" class="label-white me-3">Preferred pronouns:</label>
                 <input type="text" class="form-control" name="preferred_pronouns" id="preferred-pronouns" aria-label="preferred-pronouns">
             </div>
 
@@ -39,24 +43,24 @@
         <fieldset>
             <legend>Address</legend>
             <div class="input-group mb-3">
-                <label for "number-and-street-name" class="label-white me-3">Number and street name (required):</label>
+                <label for="number-and-street-name" class="label-white me-3">Number and street name (required):</label>
                 <input type="text" class="form-control" name="number_and_street_name" id="number-and-street-name" aria-label="number-and-street-name" aria-describedby="street" required>
                 <span id="street" aria-live="assertive"></span>
             </div>
 
             <div class="input-group mb-3">
-                <label for "locality-name" class="label-white me-3">Locality name (if required):</label>
+                <label for="locality-name" class="label-white me-3">Locality name (if required):</label>
                 <input type="text" class="form-control" name="locality_name" id="locality-name" aria-label="locality-name">
             </div>
 
             <div class="input-group mb-3">
-                <label for "town" class="label-white me-3">Town (required):</label>
+                <label for="town" class="label-white me-3">Town (required):</label>
                 <input type="text" class="form-control" name="town" id="postcode" aria-label="town" aria-describedby="town" required>
                 <span id="town" aria-live="assertive"></span>
             </div>
 
             <div class="input-group mb-3">
-                <label for "postcode" class="label-white me-3">Postcode (required):</label>
+                <label for="postcode" class="label-white me-3">Postcode (required):</label>
                 <input type="text" class="form-control" name="postcode" id="postcode" aria-label="postcode" aria-describedby="zip" required>
                 <span id="zip" aria-live="assertive"></span>
             </div>
@@ -112,7 +116,7 @@
                     Other impairments
                 </label>
                 <div class="input-group mb-3">
-                <label for "other-impairments" class="label-white me-3">Please specify:</label>
+                <label for="other-impairments" class="label-white me-3">Please specify:</label>
                 <input type="text" class="form-control label-white me-3" name="other_impairments" id="other-impairments" aria-label="other-impairments">
             </div>
             </div>
