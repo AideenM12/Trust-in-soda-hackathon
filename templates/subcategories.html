@@ -29,13 +29,13 @@
             </div>
 
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="other" id="other">
-                <label class="form-check-label label-white me-3" for="other">
-                    Other impairments
+                <input class="form-check-input" type="checkbox" value="other-v" id="other-v">
+                <label class="form-check-label label-white me-3" for="other-v">
+                    Other visual impairments
                 </label>
                 <div class="input-group mb-3">
-                <label for "other-impairments" class="label-white me-3 mb-3">Please specify:</label>
-                <input type="text" class="form-control" name="other-impairments" id="other-impairments" aria-label="other-impairments">
+                <label for="other-impairments-v" class="label-white me-3 mb-3">Please specify:</label>
+                <input type="text" class="form-control" name="other-impairments-v" id="other-impairments-v" aria-label="other-impairments-v">
                 </div>
             </div>
         </fieldset>
@@ -57,13 +57,13 @@
             </div>
 
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="other" id="other">
-                <label class="form-check-label label-white me-3" for="other">
-                    Other impairments
+                <input class="form-check-input" type="checkbox" value="other-a0" id="other-a0">
+                <label class="form-check-label label-white me-3" for="other-a0">
+                    Other auditory impairments
                 </label>
                 <div class="input-group mb-3">
-                <label for "other-impairments" class="label-white me-3 mb-3">Please specify:</label>
-                <input type="text" class="form-control" name="other" id="other-impairments" aria-label="other-impairments">
+                <label for="other-impairments-a" class="label-white me-3 mb-3">Please specify:</label>
+                <input type="text" class="form-control" name="other-a" id="other-impairments-a" aria-label="other-impairments-a">
                 </div>
             </div>
         </fieldset>
@@ -96,11 +96,18 @@
                 <label class="form-check-label label-white me-3" for="slow-response">
                     Slow response time
                 </label>
-                <div class="input-group mb-3">
-                <label for "other-impairments" class="label-white me-3 mb-3">Please specify:</label>
-                <input type="text" class="form-control" name="other-impairments" id="other-impairments" aria-label="other-impairments">
-                </div>
             </div>
+            <div>
+                <input class="form-check-input" type="checkbox" value="other-p0" id="other-p0">
+                    <label class="form-check-label label-white me-3" for="other-p0">
+                        Other physical impairments
+                    </label>
+                    <div class="input-group mb-3">
+                    <label for="other-impairments-p" class="label-white me-3 mb-3">Please specify:</label>
+                    <input type="text" class="form-control" name="other-p" id="other-impairments-p" aria-label="other-impairments-p">
+                    </div>
+            </div>
+                    
         </fieldset>
 
         <fieldset>
@@ -127,13 +134,13 @@
             </div>
 
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="other" id="other">
-                <label class="form-check-label label-white me-3" for="other">
-                    Other impairments
+                <input class="form-check-input" type="checkbox" value="other-c0" id="other-c0">
+                <label class="form-check-label label-white me-3" for="other-c0">
+                    Other cognitive impairments
                 </label>
                 <div class="input-group mb-3">
-                <label for "other-impairments" class="label-white me-3 mb-3">Please specify:</label>
-                <input type="text" class="form-control" name="other-impairments" id="other-impairments" aria-label="other-impairments">
+                <label for="other-impairments-c" class="label-white me-3 mb-3">Please specify:</label>
+                <input type="text" class="form-control" name="other-impairments-c" id="other-impairments-c" aria-label="other-impairments-c">
                 </div>
             </div>
         </fieldset>
@@ -183,13 +190,13 @@
             </div>
 
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="other" id="other">
-                <label class="form-check-label label-white me-3" for="other">
-                    Other impairments
+                <input class="form-check-input" type="checkbox" value="other-s" id="other-s">
+                <label class="form-check-label label-white me-3" for="other-s">
+                    Other speech impairments
                 </label>
                 <div class="input-group mb-3">
-                <label for "other-impairments" class="label-white me-3 mb-3">Please specify:</label>
-                <input type="text" class="form-control" name="other-impairments" id="other-impairments" aria-label="other-impairments">
+                <label for="other-impairments-s" class="label-white me-3 mb-3">Please specify:</label>
+                <input type="text" class="form-control" name="other-impairments-s" id="other-impairments-s" aria-label="other-impairments-s">
                 </div>
             </div>
         </fieldset>
@@ -198,5 +205,5 @@
 {% endblock %}
 
 {% block scripts %}
-  <script type="text/javascript" src="{{ url_for('static', filename='js/hideThemeButtons.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/hideThemeButtons.js') }}"></script>
 {% endblock %}
