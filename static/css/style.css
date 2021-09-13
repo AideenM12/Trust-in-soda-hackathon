@@ -67,6 +67,38 @@ footer a {
   font-size: 3rem;
 }
 
+.btn-contact-submit {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+
+.btn-contact-submit:hover {
+  background-color: #000;
+  color: #fff ;
+}
+
+.btn-contact-clear {
+  background-color: #000;
+  color: #fff !important;
+  
+}
+
+.btn-contact-clear:hover {
+  background-color: #fff;
+  color: #000 !important;
+  border: 1px solid #000;
+}
+
+/*----FORMS----*/
+.form-contact {
+  border: 1px solid #000;
+}
+
+.contact-container button{
+  color: #000;
+}
+
 .btn-home:hover {
   background-color: #000;
   color: #ffffff;
