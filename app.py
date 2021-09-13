@@ -111,7 +111,7 @@ def registration():
 
             if existing_user:
                 flash("Username already exists")
-                return redirect(url_for("registration"))
+                return redirect(url_for("login"))
 
             signup = {
                 "username": request.form.get("username").lower(),
@@ -138,7 +138,7 @@ def registration():
 
             session["user"] = request.form.get("username").lower()
             flash('You have signed up successfully!')
-            return redirect(url_for("profile", username=session['user']))
+            return redirect(url_for("login"))
 
         return render_template('newprofile.html', form=form)
 
