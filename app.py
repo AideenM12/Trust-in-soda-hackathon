@@ -283,41 +283,7 @@ def insert_profile():
                                    first_name=first_name, user=user)
 
 
-@app.route("/edit_profile/<username>", methods=["GET", "POST"])
-def edit_profile(username):
-    if request.method == "POST":
-        submit = {
-            "username": session["user"],
-            'first_name': request.form('first_name'),
-            'last_name': request.form['last_name'],
-            'preferred_pronouns': request.form['preferred_pronouns'],
-            'date_of_birth': request.form['date_of_birth'],
-            'number_and_street_name': request.form['number_and_street_name'],
-            'locality_name': request.form['locality_name'],
-            'town': request.form['town'],
-            'postcode': request.form['postcode'],
-            'visual': request.form['visual'],
-            'auditory': request.form['auditory'],
-            'physical': request.form['physical'],
-            'cognitive': request.form['cognitive'],
-            'speech': request.form['speech'],
-            'other': request.form['other'],
-            'other_impairments': request.form['other_impairments'],
-            'none': request.form['none']
-        }
-        mongo.db.users.update({"username": session["user"]}), submit)
-        flash("Profile Successfully Updated")
-        return redirect(url_for("profile", username=session["user"]))
 
-    user=mongo.db.users.find_one({"username": session["user"]})
-    username=user["username"]
-    return render_template("edit-profile.html", username = username,
-                            first_name = first_name, user = user,
-                            last_name = last_name, preferred_pronouns = preferred_pronouns,
-                            date_of_birth = date_of_birth, number_and_street_name = number_and_street_name,
-                            locality_name = locality_name, town = town, postcode = postcode,
-                            visual = visual, auditory = auditory, physical = physical,
-                            cognitive = cognitive, speech = speech, other = other, none = none)
 
 
 @ app.route("/subcategories")
