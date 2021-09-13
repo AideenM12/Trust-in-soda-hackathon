@@ -1,4 +1,4 @@
-h# Contents
+# Contents
 - [Site Name](#site-name)
 - [Collaborators](#collaborators)
 - [UX](#ux)
@@ -56,7 +56,7 @@ h# Contents
 
 * [Steve](https://github.com/SteveKennyUK)
 
-![Website MockUp](assets/documentation/doc-images/MS3-Mockup.png)
+![Website MockUp](static/doc-images/mockup.png)
 
 The live website can be viewed [here](https://trust-in-soda-hackathon.herokuapp.com/)
 
