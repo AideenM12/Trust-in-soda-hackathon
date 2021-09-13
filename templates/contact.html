@@ -18,9 +18,9 @@
   {% endif %}
 {% endwith %}
 
-<div class="container-fluid contact-container text center">
+<div class="container-fluid contact-container">
     <div class="row justify-content-center">
-      <div class="col-11 col-md-8 col-xlg-6 text-center mt-5">
+      <div class="col-11 col-md-8 col-xlg-6 mt-5">
         <form method="POST" class="px-4 my-5 py-5 form-contact ">
           <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
           <h1 class="text-center">Contact us</h1>
@@ -58,7 +58,6 @@
       </div>
     </div>
   </div>
-
 {% endblock %}
 
 {% block scripts %}
