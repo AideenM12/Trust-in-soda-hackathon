@@ -25,9 +25,13 @@ input:focus {
   }
   
 /*----- HEADER, NAVBAR -----*/
+.afa-navbar, .afa-navbar a {
+  padding: 0;
+}
+
 nav li {
   color: #ffffff;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 nav a {
   color:rgba(256, 256, 256, 256) !important;
