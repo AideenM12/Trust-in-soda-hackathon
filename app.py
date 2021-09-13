@@ -166,7 +166,7 @@ def login():
                 flash("Welcome back {}!".format(
                     request.form.get("username")))
                 return redirect(url_for(
-                    "profile", username=session["user"]))
+                    "requirements"))
             else:
                 flash("Incorrect Username/password, Please try again")
                 return redirect(url_for("login"))
@@ -257,7 +257,7 @@ def insert_profile():
         user.update(
             {"username": session["user"]},
             {"$set":
-                {'first_name': request.form('first_name'),
+                {'first_name': request.form['first_name'],
                  'last_name': request.form['last_name'],
                  'preferred_pronouns': request.form['preferred_pronouns'],
                  'date_of_birth': request.form['date_of_birth'],
@@ -280,7 +280,11 @@ def insert_profile():
         first_name = user['first_name']
         if session['user']:
             return render_template('profile.html', username=username,
-                                   first_name=first_name, user=user)
+                                   first_name=first_name, user=user,last_name=last_name, preferred_pronouns=preferred_pronouns,
+                               date_of_birth=date_of_birth, number_and_street_name=number_and_street_name,
+                               locality_name=locality_name, town=town, postcode=postcode,
+                               visual=visual, auditory=auditory, physical=physical,
+                               cognitive=cognitive, speech=speech, other=other, none=none)
 
 
 
