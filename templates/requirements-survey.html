@@ -5,7 +5,7 @@
     <p class="mx-auto col-10 col-md-8">Please fill out the form below and check all needs or requirements that apply to you.</p>
     <ul class="mx-auto col-10 col-md-8">
         <li>All fields marked "required" must be completed.</li>
-        <li>Dates should all be typed in the format mm/dd/yy, (as in 21/07/2013)</li>
+        <li>Dates should all be typed in the format mm/dd/yy, (as in 07/21/2013)</li>
     </ul>
     <div class="row justify-content-center mt-5">
         <div class="col-8 col-md-4 text-center">
@@ -55,7 +55,7 @@
 
             <div class="input-group mb-3">
                 <label for="town" class="label-white me-3">Town (required):</label>
-                <input type="text" class="form-control" name="town" id="postcode" aria-label="town" aria-describedby="town" required>
+                <input type="text" class="form-control" name="town" id="town" aria-label="town" aria-describedby="town" required>
                 <span id="town" aria-live="assertive"></span>
             </div>
 
@@ -131,5 +131,5 @@
 {% endblock %}
 
 {% block scripts %}
-  <script type="text/javascript" src="{{ url_for('static', filename='js/hideThemeButtons.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/hideThemeButtons.js') }}"></script>
 {% endblock %}
