@@ -6,7 +6,7 @@ h# Contents
     - [Project Goals](#project-goals)
     - [User Stories](#user-stories)
 - [Scope](#scope)
-    - [_Planed Features_](#planed-features)
+    - [_Planned Features_](#planned-features)
 - [Structure](#structure)
   - [Existing Features](#existing-features)
     - [Features on all pages:](#features-on-all-pages)
@@ -58,7 +58,7 @@ h# Contents
 
 ![Website MockUp](assets/documentation/doc-images/MS3-Mockup.png)
 
-The live website can be viewed [here](https://motherfolklore.herokuapp.com/)
+The live website can be viewed [here](https://trust-in-soda-hackathon.herokuapp.com/)
 
 
 # UX
@@ -87,7 +87,7 @@ The live website can be viewed [here](https://motherfolklore.herokuapp.com/)
 
 # Scope 
 
-### _Planed Features_
+### _Planned Features_
 
 1. Responsive website with a navigation menu and website title.
 2. Login functionality
@@ -101,7 +101,7 @@ The live website can be viewed [here](https://motherfolklore.herokuapp.com/)
 10. Ability for users to select an alternative color scheme
 
 
-| -   | Planed Feature                                                     | Importance | Viability/Feasibility |
+| -   | Planned Feature                                                     | Importance | Viability/Feasibility |
 | --- | ------------------------------------------------------------------ | ---------- | --------------------- |
 | 1   | Responsive website with a navigation menu and website title                                             | 5          | 4                     |
 | 2   | Login functionality                                   | 4          | 4                     |
